@@ -4,16 +4,25 @@ MISI: M01041173
 Course:  CST1510 - Programming for Data Communication and Networks
 CST1510 Week 7 Lab: Secure Authentication System
 '''
-# --------- Step 3 - Import Required Modules
+# --------- Step 3 - Import Modules
 import bcrypt
 import os
-# Import additional modules
+
+# Import additional modules (Challenge Questions)
 import string
 import re
-
+import time
+import secrets
 
 # ---------  Step 6. Define the User Data File
 USER_DATA_FILE = "users.txt"
+
+# File Constant
+SESSION_FILE = "sessions.txt"
+
+# Account lockout constants (Challenge 3)
+MAX_ATTEMPTS = 3
+ACCOUNT_LOCK_TIME = 300  # 5 minutes
 
 # --------- Step 4 - Implement the Password Hashing Function
 def hash_password(plain_text_password: str) -> str:
@@ -50,10 +59,6 @@ def verify_password(plain_text_password: str, hashed_password: str) -> bool:
     bool: True if the password matches, False otherwise
 
     '''
-    # Check for empty or whitespace-only input
-    if not plain_text_password.strip() or not hashed_password.strip():
-        raise ValueError("Invalid input: password and hashed password cannot be blank or whitespace only.")
-
     # Encode both the plaintext password and the stored hash to bytes
     password_bytes = plain_text_password.encode('utf-8')
     hashed_password_bytes = hashed_password.encode('utf-8')
@@ -96,7 +101,7 @@ TEMPORARY TEST CODE
 '''
 
 # --------- Step 7. Implement the Registration Function
-def register_user(username: str, password: str) -> tuple[bool, str]:
+def register_user(username: str, password: str, role: str = "user") -> bool:
     '''
     Registers a new user by hashing their password and storing credentials.
 
@@ -107,24 +112,25 @@ def register_user(username: str, password: str) -> tuple[bool, str]:
      Returns:
        bool: True if registration successful, False if username already exists
 
-    '''
-    # Check for empty or whitespace-only input
-    if not username.strip() or not password.strip():
-        return False, "Username and password cannot be empty."
-    
+    Challenge 2:
+    Register a user with a specific role (user, admin, analyst).
+
+
+    '''    
     # Check if the username already exists
     if user_exists(username):
-        return False, f"Error: Username '{username}' already exists."
+        print(f"Error: Username '{username}' already exists.")
+        return False
     
     # Hash the password
     hashed_password = hash_password(password)
 
     # Append the new user to the file
-    # Format: username,hashed_password
+    # Format: username,hashed_password, role (updated format for Challenge 2)
     try:
         with open("users.txt", "a") as f:
-            f.write(f"{username},{hashed_password}\n") 
-            print(f"User '{username}' registered.")
+            f.write(f"{username},{hashed_password},{role}\n") 
+            print(f"User '{username}' - {role} registered")
         return True 
     
     except ValueError:
@@ -148,7 +154,8 @@ def user_exists(username: str) -> bool:
     '''
     # Handle the case where the file doesn't exist yet
     if not os.path.exists(USER_DATA_FILE):
-       return False, f"{USER_DATA_FILE} does not exist."
+       print(f"{USER_DATA_FILE} does not exist.")
+       return False
     
     # Read the file and compare stored usernames
     # Error handling to prevent crashes
@@ -156,16 +163,15 @@ def user_exists(username: str) -> bool:
         with open(USER_DATA_FILE, "r") as f:
             # Read each line and compare stored username with input
             for line in f:
-                saved_username = line.strip().split(":")[0]
+                saved_username = line.strip().split(",")[0]
                 if username == saved_username:
                     return True
                 
     except Exception as e:
         print(f"Error checking user existence: {e}")
-    
     return False
 
-# --------- Step9, Implement the Login Function
+# --------- Step 9, Implement the Login Function
 def login_user(username, password): 
    '''
    Authenticates a user by verifying their username and password.
@@ -178,33 +184,38 @@ def login_user(username, password):
     bool: True if authentication successful, False otherwise
    '''
 
-   # Handle the case where no users are registered yet
    if not os.path.exists(USER_DATA_FILE):
-    return False, "⚠️ No users registered yet."
-   
+    print("⚠️ No users registered yet.")
+    return False
+
    # Search for the username in the file
- 
    try:
-    with open(USER_DATA_FILE) as f:
+       with open(USER_DATA_FILE) as f:
         for line in f.readlines():
+            # Use split(',', 1) in case extra fields exist
             user, hash = line.strip().split(',', 1)
 
             # If username matches, verify the password
             if user == username:
                 if verify_password(password, hash):
-                    return True, f"✅ Login successful! Welcome, {username}."
+                    failed_attempts[username] = 0  # Reset failed attempts
+                    print(f"✅ Login successful! Welcome, {username}.")
+                    return True
                 else:
-                    return False, "❌ Invalid username or password."
+                    add_failed_attempt(username)
+                    print("❌ Invalid username or password.")
+                    return False
+        # Username not found after checking all lines
+        print("❌ Invalid username or password.")
+        return False
+        
+    except FileNotFoundError:
+       print("⚠️ No users registered yet.")
+       return False
+    except Exception as e:
+       print(f"Error during login: {e}")
+       return False
 
-    # If we reach here, the username was not found
-    return False, "Invalid username or password."
-
-   except ValueError:
-    print("Error: Invalid input for login.")
-
-   except Exception as e:
-    print(f"Error during login: {e}")
-    return False, " ⚠️ An error occurred during login."
 
 
 # --------- Step10. Implement Input Validation
@@ -234,45 +245,173 @@ def validate_username(username):
         return False, "Username cannot start or end with an underscore."
     
     # Check if username is entirely numeric
-    if username.isdigit():
+    if username.isdigit() or username.isnumeric():
         return False, "Username cannot be entirely numeric."
     
     # Check for spaces in username
-    if ' ' in username:
+    if username.isspace() or ' ' in username:
         return False, "Username cannot contain spaces."
     
     return True, "Username is valid."
 
 
-def validate_password(password):
-    symbols = string.punctuation
+def validate_password(password, username):
+    '''
+    Validates password strength.
+
+    Args:
+    password (str): The password to validate
+
+    Returns:
+    tuple: (bool, str) - (is_valid, error_message)
+
+    '''
+    if not password:   
+        return False, "Password cannot be empty."
     # Check length
     if len(password) < 6 or len(password) > 50:
         return False, "Password must be between 6 and 50 characters long."
 
     # Check letters and digits with regex
-    if re.search(r"[a-z]", password) and re.search(r"[A-Z]", password) and re.search(r"\d", password):
+    if not (re.search(r"[a-z]", password) and re.search(r"[A-Z]", password) and re.search(r"\d", password)):
         return False, "Password must contain at least one uppercase letter, one lowercase letter, and one digit."
+    if password.isspace() or ' ' in password:
+        return False, "Password cannot contain spaces."
+    if username in password.lower():
+        return False, "Password cannot contain your username."
     
     return True, ""             
 
 # --------- Step 11. Implement the Main Menu
 def display_menu():
-    print("\n" + "="*50)
-    print(" MULTI-DOMAIN INTELLIGENCE PLATFORM")
-    print(" Secure Authentication System")
-    print("="*50)
-    print("\n[1] Register a new user")
-    print("[2] Login")
-    print("[3] Exit")
-    print("-"*50)
+    # Decorative header
+    print("\n" + "="*60)
+    print("🧠 MULTI-DOMAIN INTELLIGENCE PLATFORM 🧠".center(60))
+    print("🔒 Secure Authentication System 🔒".center(60))
+    print("="*60 + "\n")
+
+    # Menu options with icons
+    menu = ["[1] ✨ Register a new user", "[2] 🔑 Login", "[3] ❌ Exit"]
+
+    # Display menu
+    for option in menu:
+        print(option)
+    print("-"*60)
+
+# ========== Challenge Section:  Implementing additional features: ==========
+
+# Challenge 1: Password Strength Indicator
+def check_password_strength(password):
+    '''
+   Evaluates password strength.
+
+   Returns:
+   str: "Weak", "Medium", or "Strong"
+    '''
+    # Initialize criteria flags
+    upper = lower = digit = special_char = False
+    symbols = string.punctuation
+
+    # Check for empty password
+    if not password:
+        return False, "Password cannot be empty."
+    
+    # Check length
+    if len(password) < 6:
+        return False, "Password too short. Minimum 6 characters."
+  
+    if len(password) > 50:
+        return False, "Password too long. Maximum 50 characters allowed."
+    
+    # Evaluate character types
+    for char in password:
+        if char.isupper():
+            upper = True
+        elif char.islower():
+            lower = True
+        elif char.isdigit():
+            digit = True
+        elif char in symbols:
+            special_char = True
+        elif char.isspace():
+            return False, "Spaces are not allowed in the password."
+        
+    # Calculate strength points
+    strength_points = upper + lower + digit + special_char
+    bar = "█" * strength_points + "░" * (4 - strength_points)
+
+    # Display password strength bar
+    print("\n" + "-" * 55)
+    print(f" Password Strength Indicator: [{bar}]")
+    print("-" * 55)
+
+    # Determine strength level
+    if strength_points < 3:
+        return False, "Weak password ❌: must include uppercase, lowercase, digit, and special character."
+    elif strength_points == 3:
+        return True, "Moderate password ⚠️: consider adding the missing character type for extra strength."
+    else:
+        return True, "Strong password ✅: good job!"
+    
+# == Challenge 3: Account Lockout ==
+
+# Dictionary to track failed attempts
+failed_attempts = {}
+
+def add_failed_attempt(username):
+    """Increment the failed attempts count and handle lockout."""
+
+    # Get current attempts for the user
+    if username in failed_attempts:
+        attempts_count = failed_attempts[username]
+    else:
+        attempts_count = 0
+
+    # Increment attempts
+    attempts_count += 1
+    failed_attempts[username] = attempts_count
+
+    print(f"Failed attempts: {attempts_count} | Remaining attempts: {MAX_ATTEMPTS - attempts_count} for user '{username}'")
+   
+    # Check if max attempts reached
+    if attempts_count >= MAX_ATTEMPTS:
+        print("🚫 Too many failed attempts. Account locked for 5 minutes.")
+
+        remaining = ACCOUNT_LOCK_TIME
+        while remaining > 0:
+            minutes = remaining // 60
+            seconds = remaining % 60
+            print(f"\r🔒 Try again in {minutes}m {seconds}s", end="")
+            time.sleep(1)
+            remaining -= 1
+
+        print("\n🔓 Account unlocked. You can try logging in again.")
+        failed_attempts[username] = 0  # Reset after lockout
+
+    return True
+
+
+# == Challenge 4: Session Management ==
+def create_session(username):
+    """Create a session token for the logged-in user."""
+
+    # Generate a secure random token
+    token = secrets.token_hex(16)
+
+    # Store token with timestamp
+    with open(SESSION_FILE, 'a') as f:
+        f.write(f"{username},{token}\n")
+
+    # Display session token
+    print(f"🛡️ Session token created: {token}")
+    return token
 
 def main():
-    print("\nWelcome to the Week 7 Authentication System!")
+    print("Welcome to the Week 7 Authentication System!")
 
     while True:
         display_menu()
-        choice = input("\nPlease select an option (1-3): ").strip()
+        choice = input("Select an option (1-3): ").strip()
 
         if choice == '1':
             # Registration flow
