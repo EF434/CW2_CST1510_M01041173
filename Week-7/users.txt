@@ -1,1 +1,2 @@
-alice,$2b$12$GWCahbpok4Y88qVvk0xWbum84WeffM3AsGiOraI8V9uRUL/GQe.QK
+Brian,$2b$12$1royS1AAORAKE0hf9.9mYOQk3DU40Dev65f1zNMEhUa5QT3adNri.,analyst
+Matt,$2b$12$oPcS9BOyVm0W3WmXRLp.Je2bJofYRbZQWTb1sxP4amDJcBiE1wdEi,admin
