@@ -6,18 +6,25 @@ Student ID: M01041173
 Course: CST1510 -CW2 - Multi-Domain Intelligence Platform
 
 ## Project Description
-A command-line authentication system implementing secure password hashing
-This system allows users to register accounts and log in with proper password
+This project is a command-line authentication system designed to securely handle user registration and login using password hashing. Users can register new accounts with strong passwords, log in with existing credentials, and experience additional security features such as role-based access, account lockout, password strength indication, and session management.
 
 ## Features
 - Secure password hashing using bcrypt with automatic salt generation
 - User registration with duplicate username prevention
 - User login with password verification
 - Input validation for usernames and passwords
-- File-based user data persistence
+- Password strength indicator (Weak, Moderate, Strong)
+- Role-based user system (user, admin, analyst) with default fallback
+- Account lockout after 3 failed login attempts (5-minute lock)
+- Session management with secure random tokens
+- File-based user data persistence (`users.txt` and `sessions.txt`)
 
 ## Technical Implementation
-- Hashing Algorithm: bcrypt with automatic salting
-- Data Storage: Plain text file (`users.txt`) with comma-separated values
-- Password Security: One-way hashing, no plaintext storage
-- Validation: Username (3-20 alphanumeric characters), Password (6-50 characters)
+- **Hashing Algorithm:** bcrypt with automatic salting
+- **Data Storage:** Plain text files (`users.txt`, `sessions.txt`) with comma-separated values
+- **Password Security:** One-way hashing; no plaintext storage
+- **Validation:**
+  - Username: 4–20 characters, alphanumeric with optional underscores (not at start/end), cannot be all numeric, no spaces
+  - Password: 6–50 characters, must include uppercase, lowercase, digit, optional special character, cannot contain username
+- **Account Lockout:** 3 failed login attempts → 5-minute lock
+- **Session Management:** Generates secure random 32-character hex token stored in `sessions.txt`
