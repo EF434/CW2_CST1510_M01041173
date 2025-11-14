@@ -1,2 +1,3 @@
-Brian,$2b$12$1royS1AAORAKE0hf9.9mYOQk3DU40Dev65f1zNMEhUa5QT3adNri.,analyst
-Matt,$2b$12$oPcS9BOyVm0W3WmXRLp.Je2bJofYRbZQWTb1sxP4amDJcBiE1wdEi,admin
+Alice,$2b$12$gBlHVUJQJzVFToHvAW2rLegepybyLVT/oAi0UEfQ..NpzYKGFZNGG,admin
+Emma,$2b$12$lhprFcsEGKJ5F3o5z3weTuJBQ3BbCEmXIrAylIyfbvwfzJJPXNpu.,analyst
+Brian,$2b$12$UKxnRacBXvPPT0JzjjKEqOd2NlU8EyJZmpHj6APSw7Xxwrs8cv0h.,user
