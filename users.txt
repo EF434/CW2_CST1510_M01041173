@@ -1,3 +1,0 @@
-Alice,$2b$12$gBlHVUJQJzVFToHvAW2rLegepybyLVT/oAi0UEfQ..NpzYKGFZNGG,admin
-Emma,$2b$12$lhprFcsEGKJ5F3o5z3weTuJBQ3BbCEmXIrAylIyfbvwfzJJPXNpu.,analyst
-Brian,$2b$12$UKxnRacBXvPPT0JzjjKEqOd2NlU8EyJZmpHj6APSw7Xxwrs8cv0h.,user
