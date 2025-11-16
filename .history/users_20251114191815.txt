@@ -1,2 +1,0 @@
-Alice,$2b$12$O1trly7L7EiFidqdtDQPa.1IwfiEk1tHiPKctoVNM.DrE1CzyNCvy,admin
-Emma,$2b$12$ari2kvlstm0wa6cwAabJr.VUfgcrYg68NvpsYwfba5FU2ibSyoLYG,analyst
