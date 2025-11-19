@@ -1,0 +1,4 @@
+pandas
+bcrypt
+sqlite3
+

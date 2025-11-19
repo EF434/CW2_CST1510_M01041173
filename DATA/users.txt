@@ -1,7 +1,3 @@
-Alice,$2b$12$Z7T5Z0s3QqsJHMQ5S4r.Jee7IXAbLRf5E2hyE4PJ/WbOyTef02.Ue,admin
-Brian,$2b$12$Om8yfQfybn/3SfTteyCkCuwUj1873allJwTG3KiNo0ZWAuSJktBOe,analyst
-Emma,$2b$12$wN/dmSqsXURWzHpv97XJqOxtKERoD/8e4cUaSe1LYDDNoothi0/Am,user
-Albert,$2b$12$d6zJ5lRzmIB9yccR..5QY.Rg54PLr07zallsoW.zAKswEdIRwKpgK,user
-Peter,$2b$12$tvq.YTL18MT2oscMF9Gm/./bTkd.XZDvNxTCKSMY6rO5kRJvyPMC6,admin
-Nathan,$2b$12$0PiCCahaIegGN9QOYkMZkOWvTGR/BrP3tuLBybvquU4fBo0qJJUim,analyst
-Micheal,$2b$12$C24L4dxtAQJ1NQOyO16eMOQfhZvqEsJZZplV1Aim6/Vzj8eyoOaCa,admin
+Alcie,$2b$12$KZ/wCwKdGOwxN1g2mfq0h.o8BB8PiOzQIxa7B56oA8ZXhXNivVdeq,admin
+Adam,$2b$12$5.Ca9fIHZhKEiaRSDJq91e8lShlssXSdx9Bg7hf6HX5gw8EVZ.clS,user
+Brian,$2b$12$R95l641lERKvZr9oXyJZAe.SDAXGvvxeOFFoWb47iqDWz/PHAZDdq,analyst
