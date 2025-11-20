@@ -118,30 +118,3 @@ def get_unresolved_tickets(conn):
     df =  pd.read_sql_query(query, conn)
     return df
 
-# 📊 Staff or process causing ticket delays
-def get_ticket_delays(conn):
-    """
-    Identify staff members or process stages causing the most unresolved tickets.
-    Shows counts of unresolved tickets by assigned staff and status.
-    """
-    # Count unresolved tickets by assigned staff
-    staff_query = """
-        SELECT assigned_to, COUNT(*) AS unresolved_count
-        FROM it_tickets
-        WHERE resolved_date IS NULL OR resolved_date = ''
-        GROUP BY assigned_to
-        ORDER BY unresolved_count DESC
-    """
-    staff_df = pd.read_sql_query(staff_query, conn)
-
-    # Count unresolved tickets by current status (process stage)
-    status_query = """
-        SELECT status, COUNT(*) AS unresolved_count
-        FROM it_tickets
-        WHERE resolved_date IS NULL OR resolved_date = ''
-        GROUP BY status
-        ORDER BY unresolved_count DESC
-    """
-    status_df = pd.read_sql_query(status_query, conn)
-
-    return staff_df, status_df

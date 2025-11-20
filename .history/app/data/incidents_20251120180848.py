@@ -166,7 +166,6 @@ def get_incident_types_with_many_cases(conn, min_count=5):
     df = pd.read_sql_query(query, conn, params=(min_count,))
     return df
 
-# 📊 Identify trends in incident types
 def get_incident_trend(conn):
     """
     Identify incident type trends.
@@ -182,7 +181,6 @@ def get_incident_trend(conn):
     return df
 
 
-# 🚨 Identify unresolved incidents by type
 def unresolved_incidents_by_type(conn):
     """
     Identify which incident type has the most unresolved cases.

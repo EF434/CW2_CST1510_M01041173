@@ -125,7 +125,7 @@ def display_resource_usage(conn):
 # 📊 Analyze source dependency
 def list_datasets_by_source(conn):
     """
-     Count datasets grouped by source to see which sources contribute the most.
+    Show how many datasets come from each source to identify dependency risk.
     """
     insert_sql = """
         SELECT source, COUNT(*) AS dataset_count

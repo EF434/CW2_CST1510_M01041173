@@ -1,20 +1,15 @@
 """
-incidents.py - Helper functions for managing cyber incidents in the database.
+incidents.py - Provide helper functions for managing user in daabase
+ - Function to retrive username
+ - Function to add user to the database
 
-Includes:
-- Insert new incidents
-- Retrieve incidents
-- Update and delete records
-- Analytical SQL queries for incident trend and backlog detection
 """
 
 # Import required modules
 import pandas as pd
 import sqlite3
 
-# ----------------- CRUD FUNCTIONS -----------------
 
-# 🌟 Add a new incident to the database
 def insert_incident(conn, date, incident_type, severity, status, description, reported_by=None):
     """
     Insert a new cyber incident into the database.
@@ -50,10 +45,10 @@ def insert_incident(conn, date, incident_type, severity, status, description, re
         print(f"Error inserting incident: {e}")
         return None
     
-# 🌟 Retrieve all incidents from the database 
+    
 def get_all_incidents(conn):
     """
-    Get all incidents from the database.
+    Retrieve all incidents from the database.
     
     TODO: Implement using pandas.read_sql_query()
     
@@ -69,7 +64,7 @@ def get_all_incidents(conn):
         print(f"Error retrieving incidents: {e}")
         return pd.DataFrame()
     
-# 🌟 Update the status of an incident
+
 def update_incident_status(conn, incident_id, new_status):
     """
     Update the status of an incident.
@@ -95,7 +90,7 @@ def update_incident_status(conn, incident_id, new_status):
         print(f"Failed to update incident {incident_id}: {e}")
         return 0
  
-# 🌟 Delete an incident from the database
+
 def delete_incident(conn, incident_id):
     """
     Delete an incident from the database.
@@ -119,7 +114,7 @@ def delete_incident(conn, incident_id):
         print(f"Error! Incident {incident_id} deletion failed: {e}")
         return 0
     
-# 📊 Count incidents by type
+
 def get_incidents_by_type_count(conn):
     """
     Count incidents by type.
@@ -134,7 +129,6 @@ def get_incidents_by_type_count(conn):
     df = pd.read_sql_query(query, conn)
     return df
 
-# 📊 Count high severity incidents by status
 def get_high_severity_by_status(conn):
     """
     Count high severity incidents by status.
@@ -150,7 +144,6 @@ def get_high_severity_by_status(conn):
     df = pd.read_sql_query(query, conn)
     return df
 
-# 📊 Find incident types with many cases
 def get_incident_types_with_many_cases(conn, min_count=5):
     """
     Find incident types with more than min_count cases.
@@ -166,7 +159,6 @@ def get_incident_types_with_many_cases(conn, min_count=5):
     df = pd.read_sql_query(query, conn, params=(min_count,))
     return df
 
-# 📊 Identify trends in incident types
 def get_incident_trend(conn):
     """
     Identify incident type trends.
@@ -181,9 +173,21 @@ def get_incident_trend(conn):
     df = pd.read_sql_query(query, conn)
     return df
 
-
-# 🚨 Identify unresolved incidents by type
-def unresolved_incidents_by_type(conn):
+def get_high_severity_backlog(conn):
+    """
+    Count high severity incidents grouped by status.
+    Uses: SELECT, FROM, WHERE, GROUP BY, ORDER BY
+    """
+    query = """
+    SELECT status, COUNT(*) AS high_severity_count
+    FROM cyber_incidents
+    WHERE severity = 'High'
+    GROUP BY status
+    ORDER BY high_severity_count DESC
+    """
+    df = pd.read_sql_query(query, conn)
+    return df
+def get_unresolved_bottleneck(conn):
     """
     Identify which incident type has the most unresolved cases.
     Uses: SELECT, FROM, WHERE, GROUP BY, ORDER BY
@@ -199,19 +203,5 @@ def unresolved_incidents_by_type(conn):
     return df
 
 
-# ⏱️ Calculate resolution time for incidents
-def resolution_time_by_type(conn):
-    # Get resolved incidents
-    df = pd.read_sql_query("SELECT incident_type, date, resolved_at FROM cyber_incidents WHERE status = 'Resolved'", conn)
-    
-    # Convert to datetime
-    df['date'] = pd.to_datetime(df['date'])
-    df['resolved_at'] = pd.to_datetime(df['resolved_at'])
-    
-    # Calculate resolution time (timedelta)
-    df['resolution_days'] = df['resolved_at'] - df['date']
-    
-    # Sort so longest resolution is first
-    df = df.sort_values('resolution_days', ascending=False)
-    
-    return df
+
+

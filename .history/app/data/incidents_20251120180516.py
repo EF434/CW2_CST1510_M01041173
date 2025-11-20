@@ -95,7 +95,7 @@ def update_incident_status(conn, incident_id, new_status):
         print(f"Failed to update incident {incident_id}: {e}")
         return 0
  
-# 🌟 Delete an incident from the database
+
 def delete_incident(conn, incident_id):
     """
     Delete an incident from the database.
@@ -119,7 +119,7 @@ def delete_incident(conn, incident_id):
         print(f"Error! Incident {incident_id} deletion failed: {e}")
         return 0
     
-# 📊 Count incidents by type
+
 def get_incidents_by_type_count(conn):
     """
     Count incidents by type.
@@ -134,7 +134,6 @@ def get_incidents_by_type_count(conn):
     df = pd.read_sql_query(query, conn)
     return df
 
-# 📊 Count high severity incidents by status
 def get_high_severity_by_status(conn):
     """
     Count high severity incidents by status.
@@ -150,7 +149,6 @@ def get_high_severity_by_status(conn):
     df = pd.read_sql_query(query, conn)
     return df
 
-# 📊 Find incident types with many cases
 def get_incident_types_with_many_cases(conn, min_count=5):
     """
     Find incident types with more than min_count cases.
@@ -166,7 +164,6 @@ def get_incident_types_with_many_cases(conn, min_count=5):
     df = pd.read_sql_query(query, conn, params=(min_count,))
     return df
 
-# 📊 Identify trends in incident types
 def get_incident_trend(conn):
     """
     Identify incident type trends.
@@ -182,7 +179,6 @@ def get_incident_trend(conn):
     return df
 
 
-# 🚨 Identify unresolved incidents by type
 def unresolved_incidents_by_type(conn):
     """
     Identify which incident type has the most unresolved cases.
@@ -199,7 +195,6 @@ def unresolved_incidents_by_type(conn):
     return df
 
 
-# ⏱️ Calculate resolution time for incidents
 def resolution_time_by_type(conn):
     # Get resolved incidents
     df = pd.read_sql_query("SELECT incident_type, date, resolved_at FROM cyber_incidents WHERE status = 'Resolved'", conn)
