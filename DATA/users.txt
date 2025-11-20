@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Alcie,$2b$12$KZ/wCwKdGOwxN1g2mfq0h.o8BB8PiOzQIxa7B56oA8ZXhXNivVdeq,admin
 Adam,$2b$12$5.Ca9fIHZhKEiaRSDJq91e8lShlssXSdx9Bg7hf6HX5gw8EVZ.clS,user
 Brian,$2b$12$R95l641lERKvZr9oXyJZAe.SDAXGvvxeOFFoWb47iqDWz/PHAZDdq,analyst
+=======
+emaan,$2b$12$x1t4cBLPXLYPYY8h7wOG2OuYSqcH1o8aYR7J9P8cI31EMKPfIR/tS,user
+alice,$2b$12$QKPIrjmpl6ej9dp7sOK7wu7ZqzC1hWS4Ol78JNcUpN4QfeJrI7ZWi,user
+brisn,$2b$12$JEAbr00iacLx855msr/Kiu7Tm3dQAUCgSsfE7INX3D3j2yJhKRde.,user
+>>>>>>> origin/main

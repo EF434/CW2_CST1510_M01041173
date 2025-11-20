@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Virtual environment
 .venv/
 venv/
@@ -19,3 +20,25 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+=======
+# Virtual environment
+venv/ 
+env/
+
+# Python cache
+__pycache_/
+*pyc 
+*.pyo
+
+# Environment variables
+.env
+.env.local
+
+# IDE settings
+.vscode/ 
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+>>>>>>> origin/main
