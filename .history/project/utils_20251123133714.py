@@ -1,0 +1,314 @@
+# ------------------- IMPORTS -------------------
+import streamlit as st
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import sys
+import os
+
+# Path setup
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.append(BASE_DIR)
+
+# ------------  Modules ------------
+from app.data.db import connect_database, load_all_csv_data
+from app.data.schema import create_all_tables
+
+# Cybersecurity
+from app.data.incidents import (
+     insert_incident, get_all_incidents,
+    update_incident_status, delete_incident,
+    get_incidents_by_type_count, get_high_severity_by_status,
+    get_incident_types_with_many_cases, get_incident_trend, unresolved_incidents_by_type
+)
+
+# IT Ops
+from app.data.tickets import (
+    insert_ticket, get_all_tickets,
+    update_ticket, delete_ticket,
+    get_unresolved_tickets, get_ticket_delays
+)
+
+# Data Science
+from app.data.datasets import (
+     insert_dataset, update_dataset, get_all_datasets,
+     list_datasets_by_source, delete_dataset,
+     get_top_recent_updates, display_resource_usage
+)
+
+# ------------------- DATABASE -------------------
+DATA_DIR = os.path.join(BASE_DIR, "DATA")
+DB_FILE = os.path.join(DATA_DIR, "intelligence_platform.db")
+
+conn = connect_database(DB_FILE)
+create_all_tables(conn)
+
+
+# ------------------- VIEW RECORDS -------------------
+def view_records(conn, table_name):
+    st.markdown(
+            """
+            <style>
+            .table-header {
+                font-family: "Segoe UI", Roboto, sans-serif;
+                font-size: 28px;
+                font-weight: 700;
+                letter-spacing: 0.6px;
+                color: #0b3d91;
+                margin: 0;
+                padding-bottom: 6px;
+                display: inline-block;
+                border-bottom: 4px solid #ff4b4b;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
+# ------------------- VIEW RECORDS -------------------
+def view_records(conn, table_name):
+    if table_name == "cyber_incidents":
+        df = get_all_incidents(conn)
+
+        st.markdown('<div class="cyber-sub">🔒 Cyber Incidents</div>', unsafe_allow_html=True)
+
+
+        # Filters above table
+        severity_filter = st.multiselect(
+            "Select Severity",
+            ["Low", "Medium", "High", "Critical"],
+            default=["Low", "Medium", "High", "Critical"]
+        )
+
+        status_filter = st.multiselect(
+            "Select Status",
+            ["Open", "Investigating", "Resolved", "Closed"],
+            default=["Open", "Investigating", "Resolved", "Closed"]
+        )
+
+        # Apply filters
+        filtered_df = df[
+            df["severity"].isin(severity_filter) &
+            df["status"].isin(status_filter)
+        ]
+
+    elif table_name == "it_tickets":
+        df = get_all_tickets(conn)
+        st.markdown('<div class="table-header">💻 IT Tickets</div>', unsafe_allow_html=True)
+
+        # Filters above table
+        priority_filter = st.multiselect(
+            "Select Priority",
+            ["Low", "Medium", "High", "Critical"],
+            default=["Low", "Medium", "High", "Critical"]
+        )
+
+        status_filter = st.multiselect(
+            "Select Status",
+            ["Open", "Investigating", "Resolved", "Closed"],
+            default=["Open", "Investigating", "Resolved", "Closed"]
+        )
+
+        # Apply filters
+        filtered_df = df[
+            df["priority"].isin(priority_filter) &
+            df["status"].isin(status_filter)
+        ]
+
+    elif table_name == "datasets_metadata":
+        df = get_all_datasets(conn)
+        st.markdown('<div class="table-header">📊 Data Science Datasets</div>', unsafe_allow_html=True)
+
+        # Convert last_updated to datetime
+        df["last_updated"] = pd.to_datetime(df["last_updated"], errors="coerce")
+
+        # Filters above table
+        department = st.multiselect(
+            "Category",
+            options=df["category"].unique(),
+            default=df["category"].unique()
+        )
+
+        min_value = int(df["record_count"].min())
+        max_value = int(df["record_count"].max())
+
+        record_count = st.slider(
+            "Record Count Range",
+            min_value=min_value,
+            max_value=max_value,
+            value=(min_value, max_value)  # Default range selects all
+        )
+
+        
+
+        # Apply filters
+        filtered_df = df[
+            df["category"].isin(department) &
+            df["record_count"].between(record_count[0], record_count[1])
+        ]
+
+    else:
+        st.error("Unknown table")
+        return
+
+    # Display filtered data
+    st.caption(f"Showing {len(filtered_df)} records after filtering.")
+    with st.expander("See Filtered Data"):
+        st.dataframe(filtered_df, use_container_width=True)
+
+
+# ------------------- ADD NEW RECORD -------------------
+def add_new_record(conn, table_name):
+    if table_name == "cyber_incidents":
+        st.subheader("Add New Cybersecurity Incident")
+        with st.form("add_incident"):
+            date = st.date_input("Date")
+            incident_type = st.selectbox("Incident Type", ["Phishing", "Malware", "DDoS", "Ransomware"])
+            severity = st.selectbox("Severity", ["Low", "Medium", "High", "Critical"])
+            status = st.selectbox("Status", ["Open", "Investigating", "Resolved", "Closed"])
+            description = st.text_area("Description")
+            reported_by = st.text_input("Reported by")
+            submitted = st.form_submit_button("Add Incident")
+            if submitted:
+                insert_incident(conn, str(date), incident_type, severity, status, description, reported_by)
+                st.success("✓ Incident added successfully!")
+                st.rerun()
+
+    elif table_name == "it_tickets":
+        st.subheader("Add New IT Ticket")
+        with st.form("add_ticket"):
+            ticket_id = st.text_input("Ticket ID")
+            priority = st.selectbox("Priority", ["Critical", "High", "Medium", "Low"])
+            status = st.selectbox("Status", ["Open", "In Progress", "Resolved", "Closed"])
+            category = st.text_input("Category")
+            subject = st.text_input("Subject")
+            description = st.text_area("Description")
+            created_date = st.date_input("Created Date")
+            resolved_date = st.date_input("Resolved Date", value=None)
+            assigned_to = st.text_input("Assigned To")
+            submitted = st.form_submit_button("Add Ticket")
+            if submitted:
+                insert_ticket(conn, ticket_id, priority, status, category, subject, description,
+                              str(created_date), str(resolved_date), assigned_to)
+                st.success("✓ Ticket added successfully!")
+                st.rerun()
+
+    elif table_name == "datasets_metadata":
+        st.subheader("Add New Dataset Metadata")
+        with st.form("add_dataset_form"):
+            dataset_name = st.text_input("Dataset Name")
+            category = st.selectbox("Category", ["Threat Intelligence", "Network Logs", "User Data", "Other"])
+            source = st.text_input("Source / Origin")
+            last_updated = st.date_input("Last Updated")
+            record_count = st.number_input("Record Count", min_value=0, step=1)
+            file_size_mb = st.number_input("File Size (MB)", min_value=0.0, step=0.01)
+            submitted = st.form_submit_button("Add Dataset")
+            if submitted:
+                try:
+                    insert_dataset(conn, dataset_name, category, source, str(last_updated), record_count, file_size_mb)
+                    st.success(f"✓ Dataset '{dataset_name}' added successfully!")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"❌ Failed to add dataset: {e}")
+
+
+def update_delete_record(conn, table_name):
+
+    # ------------------- Get Records -------------------
+    if table_name == "cyber_incidents":
+        records = get_all_incidents(conn)
+        key = "id"
+    elif table_name == "it_tickets":
+        records = get_all_tickets(conn)
+        key = "ticket_id"
+    elif table_name == "datasets_metadata":
+        records = get_all_datasets(conn)
+        key = "dataset_name"
+    else:
+        st.error("Unknown table name")
+        return
+
+    if records.empty:
+        st.info("No records available to update or delete.")
+        return
+
+    record_list = records.to_dict("records")
+    ids = [r[key] for r in record_list]
+    selected = st.selectbox(f"Select record ({key})", ids)
+    idx = ids.index(selected)
+    record = record_list[idx]
+
+    # ------------------- Update / Delete Form -------------------
+    with st.form("update_delete_form"):
+        updated = {}
+
+        # Action selector
+        action = st.radio("Action", ["Update", "Delete"])
+
+        if table_name == "cyber_incidents":
+            st.subheader("Edit Cyber Incident")
+            for field, value in record.items():
+                if field == key:
+                    updated[field] = st.text_input(field, value, disabled=True)
+                elif field == "status":  # Only editable field
+                    status_options = ["Open", "In Progress", "Closed", "Resolved", "Investigating"]
+                    current_status = value 
+                    updated[field] = st.selectbox("Status", status_options, index=status_options.index(current_status))
+                else:  # Display-only fields
+                    st.text_input(field, value, disabled=True)
+
+        elif table_name == "datasets_metadata":
+            st.subheader("Edit Dataset")
+            for field, value in record.items():
+                if field == key:
+                    updated[field] = st.text_input(field, value, disabled=True)
+                elif field == "record_count":  # Only editable field
+                    updated[field] = st.number_input("Record Count", value=int(value))
+                else:  # Display-only fields
+                    st.text_input(field, value, disabled=True)
+
+
+        elif table_name == "it_tickets":
+            st.subheader("Edit Ticket")
+            for field, value in record.items():
+                if field == key:
+                    updated[field] = st.text_input(field, value, disabled=True)
+                elif field == "status":  # Only editable field
+                    status_options = ["Open", "In Progress", "Closed", "Resolved", "Investigating"]
+                    current_status = value
+                    updated[field] = st.selectbox("Status", status_options, index=status_options.index(current_status))
+                else:  # Display-only fields
+                    st.text_input(field, value, disabled=True)
+
+        submit = st.form_submit_button("Submit")
+
+    # ------------------- Perform Action -------------------
+    if submit:
+        try:
+            if action == "Update":
+                if table_name == "cyber_incidents":
+                    update_incident_status(conn, selected, updated.get("status"))
+                    st.success(f"Incident '{selected}' updated successfully!")
+                elif table_name == "it_tickets":
+                    update_ticket(conn, selected, updated.get("status"))
+                    st.success(f"Ticket '{selected}' updated successfully!")
+                elif table_name == "datasets_metadata":
+                    update_dataset(conn, selected, updated.get("record_count"))
+                    st.success(f"Dataset '{selected}' updated successfully!")
+
+            elif action == "Delete":
+                if table_name == "cyber_incidents":
+                    delete_incident(conn, selected)
+                elif table_name == "it_tickets":
+                    delete_ticket(conn, selected)
+                elif table_name == "datasets_metadata":
+                    delete_dataset(conn, selected)
+                st.success("Record deleted!")
+
+            st.rerun()
+        except Exception as e:
+            st.error(f"Action failed: {e}")
+
+
+

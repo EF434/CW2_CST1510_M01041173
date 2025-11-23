@@ -1,0 +1,147 @@
+# ------------------- IMPORTS -------------------
+import streamlit as st
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import sys
+import os
+
+# Path setup
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.append(BASE_DIR)
+
+# ------------  Modules ------------
+from app.data.db import connect_database, load_all_csv_data
+from app.data.schema import create_all_tables
+
+# Cybersecurity
+from app.data.incidents import (
+     insert_incident, get_all_incidents,
+    update_incident_status, delete_incident,
+    get_incidents_by_type_count, get_high_severity_by_status,
+    get_incident_types_with_many_cases, get_incident_trend, unresolved_incidents_by_type
+)
+
+# IT Ops
+from app.data.tickets import (
+    insert_ticket, get_all_tickets,
+    update_ticket, delete_ticket,
+    get_unresolved_tickets, get_ticket_delays
+)
+
+# Data Science
+from app.data.datasets import (
+     insert_dataset, update_dataset, get_all_datasets,
+     list_datasets_by_source, delete_dataset,
+     get_top_recent_updates, display_resource_usage
+)
+
+# ------------------- DATABASE -------------------
+DATA_DIR = os.path.join(BASE_DIR, "DATA")
+DB_FILE = os.path.join(DATA_DIR, "intelligence_platform.db")
+
+conn = connect_database(DB_FILE)
+create_all_tables(conn)
+
+domain = st.sidebar.selectbox("Select Domain", ["Cybersecurity", "IT Operations", "Data Science"])
+# ------------------- DATA VISUALIZATION -------------------
+
+def data_visualization(conn, table_name):
+    if domain == "Cybersecurity":
+
+
+data_visualization(domain)
+
+# ------------------- IMPORTS -------------------
+import streamlit as st
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+import sys
+
+# Path setup
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.append(BASE_DIR)
+
+# ------------ DB + Modules ------------
+from app.data.db import connect_database
+from app.data.incidents import (
+    get_all_incidents, get_incidents_by_type_count, get_high_severity_by_status,
+    get_incident_types_with_many_cases, get_incident_trend, unresolved_incidents_by_type
+)
+from app.data.tickets import get_all_tickets
+from app.data.datasets import get_all_datasets
+
+# ------------------- DATABASE -------------------
+DATA_DIR = os.path.join(BASE_DIR, "DATA")
+DB_FILE = os.path.join(DATA_DIR, "intelligence_platform.db")
+
+conn = connect_database(DB_FILE)
+
+# ------------------- UI HEADER -------------------
+st.set_page_config(page_title="Analytics", layout="wide", page_icon="📊")
+st.title("📊 Analytics & Visualizations")
+
+# ------------------- DOMAIN SELECTION -------------------
+domain = st.selectbox("Select Domain to Visualize", ["Cybersecurity", "IT Operations", "Data Science"])
+
+# ------------------- VISUALIZATION FUNCTION -------------------
+def visualize_domain(domain):
+    if domain == "Cybersecurity":
+        st.subheader("🔒 Cybersecurity Incidents Visualizations")
+        df = get_all_incidents(conn)
+        if df.empty:
+            st.info("No data available for visualization.")
+            return
+
+        # Example: Incidents by type
+        df_type_count = get_incidents_by_type_count(conn)
+        fig1 = px.bar(df_type_count, x="incident_type", y="count", color="incident_type",
+                      title="Total Incidents by Type")
+        st.plotly_chart(fig1, use_container_width=True)
+
+        # High severity incidents
+        df_high_sev = get_high_severity_by_status(conn)
+        if not df_high_sev.empty:
+            fig2 = px.pie(df_high_sev, names="status", values="count",
+                          title="High Severity Incidents Distribution")
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Heatmap: Severity vs type
+        heatmap_data = df.pivot_table(values="id", index="incident_type",
+                                      columns="severity", aggfunc="count", fill_value=0)
+        severity_order = ["Low", "Medium", "High", "Critical"]
+        heatmap_data = heatmap_data.reindex(columns=severity_order, fill_value=0)
+
+        fig, ax = plt.subplots(figsize=(8, 5))
+        sns.heatmap(heatmap_data, annot=True, fmt="d", cmap="coolwarm", linewidths=0.5, square=True,
+                    ax=ax, cbar_kws={"label": "Number of incidents"})
+        ax.set_title("Incident Severity Distribution Across Types")
+        ax.set_xlabel("Severity Level")
+        ax.set_ylabel("Incident Type")
+        st.pyplot(fig)
+
+    elif domain == "IT Operations":
+        st.subheader("💻 IT Tickets Visualizations")
+        df = get_all_tickets(conn)
+        if df.empty:
+            st.info("No ticket data available for visualization.")
+            return
+        st.write("Implement IT tickets charts here...")  # You can add bar charts, delays, etc.
+
+    elif domain == "Data Science":
+        st.subheader("📊 Data Science Datasets Visualizations")
+        df = get_all_datasets(conn)
+        if df.empty:
+            st.info("No dataset metadata available for visualization.")
+            return
+        st.write("Implement dataset charts here...")  # e.g., record count distribution, file size, sources
+
+    else:
+        st.error("Unknown domain selected.")
+
+# ------------------- RUN VISUALIZATION -------------------
+visualize_domain(domain)

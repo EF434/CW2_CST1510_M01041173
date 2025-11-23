@@ -1,0 +1,90 @@
+import streamlit as st
+from datetime import date
+
+
+# ------------ APP MODULES ------------
+from app.data.db import connect_database, load_all_csv_data
+from app.data.schema import create_all_tables
+
+# Domain: Cybersecurity
+from app.data.incidents import (
+    get_all_incidents, insert_incident, update_incident_status, delete_incident,
+    get_incidents_by_type_count, get_high_severity_by_status
+)
+
+# Domain: IT Operations
+from app.data.tickets import (
+    insert_ticket, update_ticket, delete_ticket, get_unresolved_tickets, get_ticket_delays
+)
+
+# Domain: Data Science
+from app.data.datasets import (
+    insert_dataset, update_dataset, delete_dataset,
+    get_top_recent_updates, display_resource_usage, list_datasets_by_source
+)
+
+
+# ----------------- VIEW RECORDS -----------------
+def view_records(domain_name, df, filters=None):
+    st.subheader(f"📄 {domain_name} Records")
+    if df.empty:
+        st.info("No data available.")
+        return
+
+    if filters:
+        with st.expander("🔍 Filters"):
+            selected_filters = {}
+            for col, options in filters.items():
+                selected_filters[col] = st.multiselect(col, options, default=options)
+            for col, selected in selected_filters.items():
+                df = df[df[col].isin(selected)]
+    
+    st.caption(f"Showing {len(df)} filtered records")
+    st.dataframe(df, use_container_width=True)
+
+
+# ----------------- ADD NEW RECORD -----------------
+def add_new_record(domain_name, insert_func, form_fields):
+    st.subheader(f"➕ Add New {domain_name} Record")
+    with st.form(f"add_form_{domain_name}"):
+        title = st.text_input("Incident Title")
+        severity = st.selectbox("Severity", ["Low", "Medium", "High", "Critical"])
+        status = st.selectbox("Status", ["Open", "In Progress", "Resolved"])
+        description = st.text_area("Description")
+        reported_by = st.text_input("Reported By (optional)")
+
+        submitted = st.form_submit_button("Add Incident")
+
+
+        if st.form_submit_button("Save Record"):
+            insert_incident(conn, title, severity, status, description, reported_by)
+            st.success(f"✔ {domain_name} record added successfully!")
+
+
+# ----------------- UPDATE / DELETE -----------------
+def update_delete_record(domain_name, df, update_func=None, delete_func=None, update_fields=None):
+    st.subheader(f"✏ Update / Delete {domain_name} Record")
+    if df.empty:
+        st.warning("No records available.")
+        return
+
+    selected_id = st.selectbox("Select Record ID:", df["id"])
+    selected_row = df[df["id"] == selected_id].iloc[0]
+    st.json(selected_row.to_dict())
+
+    if update_func and update_fields:
+        updated_values = {}
+        for field in update_fields:
+            label = field["label"]
+            options = field.get("options")
+            if options:
+                updated_values[label] = st.selectbox(f"Update {label}:", options)
+            else:
+                updated_values[label] = st.text_input(f"Update {label}:", value=selected_row[label])
+        if st.button("Update Record"):
+            update_func(selected_id, **updated_values)
+            st.success("Record Updated Successfully!")
+
+    if delete_func and st.button("❌ Delete Record"):
+        delete_func(selected_id)
+        st.error("Record Deleted!")

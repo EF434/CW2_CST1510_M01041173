@@ -1,0 +1,112 @@
+id,ticket_id,priority,status,category,subject,description,created_date,resolved_date,assigned_to, created_at
+1,T001,Microbiome Project,https://github.com/biocore/American-Gut,Biology,2024-11-01,2,0.9,Technician,High,Open,2025-11-01 09:00:00
+2,T002,GloBI,https://github.com/jhpoelen/eol-globi-data/wiki#accessing-species-interaction-data,Biology,2024-11-02,3,1.2,Admin Team,Medium,Open,2025-11-02 09:30:00
+3,T003,Global Climate,http://en.tutiempo.net/climate,Climate/Weather,2024-11-02,56,3.2,Technician,High,In Progress,2025-11-03 10:15:00
+4,T004,CommonCraw 2012,http://www.bigdatanews.com/profiles/blogs/big-data-set-3-5-billion-web-pages-made-available-for-all-of-us,Computer Networks,2024-11-01,47,2.2,Admin Team,Medium,Open,2025-11-04 11:00:00
+5,T005,Indiana Webclicks,http://cnets.indiana.edu/groups/nan/webtraffic/click-dataset/,Computer Networks,2024-11-05,74,2.3,Technician,High,Open,2025-11-05 09:45:00
+6,T006,Criteo click-through,http://labs.criteo.com/2015/03/criteo-releases-its-new-dataset/,Computer Networks,2024-11-06,80,4.3,Admin Team,High,In Progress,2025-11-06 10:30:00
+7,T007,ICWSM 2009,http://icwsm.cs.umbc.edu/,Data Challenges,2024-11-07,43,2.5,Technician,Medium,Open,2025-11-07 09:50:00
+8,T008,KDD Cup,http://www.kddcup2012.org/,Data Challenges,2024-11-08,6,1.2,Admin Team,High,Open,2025-11-08 10:20:00
+9,T009,Localytics Data,https://github.com/localytics/data-viz-challenge,Data Challenges,2024-11-09,43,1.2,Technician,High,In Progress,2025-11-09 11:10:00
+10,T010,Yelp Dataset,http://www.yelp.com/dataset_challenge,Data Challenges,2024-04-05,54,1.2,Admin Team,Medium,Open,2025-11-10 09:40:00
+11,T011,Bruteforce Database,https://github.com/duyetdev/bruteforce-database,Data Challenges,2024-11-06,2,2.3,Technician,High,In Progress,2025-11-11 10:15:00
+12,T012,Countries,https://github.com/umpirsky/country-list,GIS,2024-11-01,4,2.3,Admin Team,Medium,Open,2025-11-12 09:50:00
+13,T013,TwoFishes,https://github.com/foursquare/twofishes,GIS,2024-11-02,2,2.3,Technician,High,Open,2025-11-13 10:05:00
+14,T014,World countries,https://github.com/mledoze/countries,GIS,2024-11-02,89,3.3,Admin Team,High,In Progress,2025-11-14 09:30:00
+15,T015,Cities and countries,https://github.com/caesar0301/awesome-public-datasets/blob/master/Government.rst,Government,2024-11-01,90,3.3,Technician,Medium,Open,2025-11-15 10:10:00
+16,T016,Ebola cases,https://data.hdx.rwlabs.org/dataset/ebola-cases-2014,Healthcare,2024-11-05,67,3.3,Admin Team,High,In Progress,2025-11-16 09:55:00
+17,T017,eBay Online,http://www.modelingonlineauctions.com/datasets,Machine Learning,2024-11-06,60,3.3,Technician,Medium,Open,2025-11-17 09:40:00
+18,T018,New Yorker Captions,https://github.com/nextml/caption-contest-data,Machine Learning,2024-11-07,49,3.3,Admin Team,High,In Progress,2025-11-18 10:25:00
+19,T019,Cooper-Hewitt's Collection,https://github.com/cooperhewitt/collection,Museums,2024-11-08,38,3.3,Technician,Medium,Open,2025-11-19 09:35:00
+20,T020,Minneapolis Institute,https://github.com/artsmia/collection,Museums,2024-11-09,27,3.3,Admin Team,High,In Progress,2025-11-20 10:10:00
+21,T021,Tate Collection,https://github.com/tategallery/collection,Museums,2025-04-05,16,3.3,Technician,Medium,Open,2025-11-21 09:50:00
+22,T022,Google 5gram,https://catalog.ldc.upenn.edu/LDC2006T13,Natural Language,2024-11-07,5,3.3,Admin Team,High,In Progress,2025-11-22 10:05:00
+23,T023,Arabic 30K articles,https://github.com/ParallelMazen/SaudiNewsNet,Natural Language,2024-11-01,67,3.3,Technician,Medium,Open,2025-11-23 09:45:00
+24,T024,USENET postings,http://www.psych.ualberta.ca/~westburylab/downloads/usenetcorpus.download.html,Natural Language,2024-11-02,56,2.3,Admin Team,High,In Progress,2025-11-24 10:20:00
+25,T025,Datahub.io,https://datahub.io/dataset,Search Engines,2024-11-02,45,2.3,Technician,Medium,Open,2025-11-25 09:55:00
+26,T026,Twitter Scrape CIKM,https://archive.org/details/twitter_cikm_2010,Social Networks,2024-11-01,34,2.3,Admin Team,High,In Progress,2025-11-26 10:10:00
+27,T027,Facebook Data,https://archive.org/details/oxford-2005-facebook-matrix,Social Networks,2024-11-05,23,2.3,Technician,Medium,Open,2025-11-27 09:40:00
+28,T028,LAW graphs,http://law.di.unimi.it/datasets.php,Social Networks,2024-11-06,12,2.3,Admin Team,High,In Progress,2025-11-28 10:05:00
+29,T029,Foursquare from,https://archive.org/details/201309_foursquare_dataset_umn,Social Networks,2024-11-07,1,2.3,Technician,Medium,Open,2025-11-29 09:50:00
+30,T030,Skytrax' Air,https://github.com/quankiquanki/skytrax-reviews-dataset,Social Networks,2024-11-08,23,2.3,Admin Team,High,In Progress,2025-11-30 10:15:00
+31,T031,Twitter Scrape,http://archive.org/details/2011-05-calufa-twitter-sql,Social Networks,2024-11-09,199,2.3,Technician,Medium,Open,2025-12-01 09:55:00
+32,T032,Youtube Video,http://netsg.cs.sfu.ca/youtubedata/,Social Networks,2025-04-05,375,2.3,Admin Team,High,In Progress,2025-12-02 10:05:00
+33,T033,FBI Hate Crime 2013,https://github.com/emorisse/FBI-Hate-Crime-Statistics/tree/master/2013,Social Sciences,2024-11-08,551,2.3,Technician,High,Open,2025-12-03 09:40:00
+34,T034,GSS,http://gss.norc.org,Social Sciences,2024-11-01,727,2.3,Admin Team,Medium,Open,2025-12-04 10:10:00
+35,T035,Texas Inmates,http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html,Social Sciences,2024-11-02,903,2.3,Technician,High,In Progress,2025-12-05 09:50:00
+36,T036,Formula 1,http://ergast.com/mrd/db,Sports,2024-11-02,1079,2.3,Admin Team,Medium,Open,2025-12-06 10:00:00
+37,T037,Pinhooker: Thoroughbred,https://github.com/phillc73/pinhooker,Sports,2024-11-01,1255,2.3,Technician,High,In Progress,2025-12-07 09:55:00
+38,T038,Airlines OD,http://stat-computing.org/dataexpo/2009/the-data.html,Transportation,2024-11-05,1431,2.3,Admin Team,Medium,Open,2025-12-08 10:10:00
+39,T039,BSS,https://github.com/BetaNYC/Bike-Share-Data-Best-Practices/wiki/Bike-Share-Data-Systems,Transportation,2024-11-06,1607,2.3,Technician,High,In Progress,2025-12-09 09:50:00
+40,T040,NYC Taxi,http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml,Transportation,2024-11-07,1783,2.3,Admin Team,Medium,Open,2025-12-10 10:05:00
+41,T041,FOIA/FOILed,https://archive.org/details/nycTaxiTripData2013,Transportation,2024-11-08,1959,2.3,Technician,High,In Progress,2025-12-11 09:45:00
+42,T042,NYC Uber,https://github.com/fivethirtyeight/uber-tlc-foil-response,Transportation,2024-11-09,2135,2.3,Admin Team,Medium,Open,2025-12-12 10:15:00
+43,T043,Open Traffic,https://github.com/graphhopper/open-traffic-collection,Transportation,2025-04-05,2311,2.3,Technician,High,In Progress,2025-12-13 09:50:00
+44,T044,Plane Crash,http://www.planecrashinfo.com/database.htm,Transportation,2024-11-09,2487,2.3,Admin Team,Medium,Open,2025-12-14 10:10:00
+45,T045,U.S. Domestic,http://academictorrents.com/details/a2ccf94bbb4af222bf8e69dad60a68a29f310d9a,Transportation,2024-11-01,2663,2.3,Technician,High,In Progress,2025-12-15 09:45:00
+46,T046,U.S. Freight,http://ops.fhwa.dot.gov/freight/freight_analysis/faf/index.htm,Transportation,2024-11-02,2839,2.3,Admin Team,Medium,Open,2025-12-16 10:05:00
+47,T047,Data Packaged,https://github.com/datasets/,Complementary Collections,2024-11-02,3015,3.4,Technician,High,In Progress,2025-12-17 09:55:00
+48,T048,USDA PLANTS,http://www.plants.usda.gov/dl_all.html,Agriculture,2024-11-01,3191,4.5,Admin Team,Medium,Open,2025-12-18 10:10:00
+49,T049,ClueWeb09,http://lemurproject.org/clueweb09/,Computer Networks,2024-11-05,3367,4.5,Technician,High,In Progress,2025-12-19 09:50:00
+50,T050,ClueWeb12,http://lemurproject.org/clueweb12/,Computer Networks,2024-11-06,3543,4.5,Admin Team,Medium,Open,2025-12-20 10:05:00
+51,T051,DEFRA Projects,http://randd.defra.gov.uk/,Energy,2024-11-07,3719,4.5,Technician,High,In Progress,2025-12-21 09:45:00
+52,T052,UK-DALE,http://www.doc.ic.ac.uk/~dk3810/data/,Energy,2024-11-08,3895,4.5,Admin Team,Medium,Open,2025-12-22 10:10:00
+53,T053,Landsat 8,https://aws.amazon.com/public-data-sets/landsat/,GIS,2024-11-09,4071,4.5,Technician,High,In Progress,2025-12-23 09:50:00
+54,T054,Reverse Geocode,https://github.com/kno10/reversegeocode,GIS,2025-04-05,4247,4.5,Admin Team,Medium,Open,2025-12-24 10:05:00
+55,T055,Faces Database,http://wilmabainbridge.com/facememorability2.html,Image Processing,2024-11-10,4423,4.5,Technician,High,In Progress,2025-12-25 09:55:00
+
+1,T001,Microbiome Project,https://github.com/biocore/American-Gut,Biology,2024-11-01,2,0.9,Technician,High,Open,2025-11-01 09:00:00
+2,T002,GloBI,https://github.com/jhpoelen/eol-globi-data/wiki#accessing-species-interaction-data,Biology,2024-11-02,3,1.2,Admin Team,Medium,Open,2025-11-02 09:30:00
+3,T003,Global Climate,http://en.tutiempo.net/climate,Climate/Weather,2024-11-02,56,3.2,Technician,High,In Progress,2025-11-03 10:15:00
+4,T004,CommonCraw 2012,http://www.bigdatanews.com/profiles/blogs/big-data-set-3-5-billion-web-pages-made-available-for-all-of-us,Computer Networks,2024-11-01,47,2.2,Admin Team,Medium,Open,2025-11-04 11:00:00
+5,T005,Indiana Webclicks,http://cnets.indiana.edu/groups/nan/webtraffic/click-dataset/,Computer Networks,2024-11-05,74,2.3,Technician,High,Open,2025-11-05 09:45:00
+6,T006,Criteo click-through,http://labs.criteo.com/2015/03/criteo-releases-its-new-dataset/,Computer Networks,2024-11-06,80,4.3,Admin Team,High,In Progress,2025-11-06 10:30:00
+7,T007,ICWSM 2009,http://icwsm.cs.umbc.edu/,Data Challenges,2024-11-07,43,2.5,Technician,Medium,Open,2025-11-07 09:50:00
+8,T008,KDD Cup,http://www.kddcup2012.org/,Data Challenges,2024-11-08,6,1.2,Admin Team,High,Open,2025-11-08 10:20:00
+9,T009,Localytics Data,https://github.com/localytics/data-viz-challenge,Data Challenges,2024-11-09,43,1.2,Technician,High,In Progress,2025-11-09 11:10:00
+10,T010,Yelp Dataset,http://www.yelp.com/dataset_challenge,Data Challenges,2024-04-05,54,1.2,Admin Team,Medium,Open,2025-11-10 09:40:00
+11,T011,Bruteforce Database,https://github.com/duyetdev/bruteforce-database,Data Challenges,2024-11-06,2,2.3,Technician,High,In Progress,2025-11-11 10:15:00
+12,T012,Countries,https://github.com/umpirsky/country-list,GIS,2024-11-01,4,2.3,Admin Team,Medium,Open,2025-11-12 09:50:00
+13,T013,TwoFishes,https://github.com/foursquare/twofishes,GIS,2024-11-02,2,2.3,Technician,High,Open,2025-11-13 10:05:00
+14,T014,World countries,https://github.com/mledoze/countries,GIS,2024-11-02,89,3.3,Admin Team,High,In Progress,2025-11-14 09:30:00
+15,T015,Cities and countries,https://github.com/caesar0301/awesome-public-datasets/blob/master/Government.rst,Government,2024-11-01,90,3.3,Technician,Medium,Open,2025-11-15 10:10:00
+16,T016,Ebola cases,https://data.hdx.rwlabs.org/dataset/ebola-cases-2014,Healthcare,2024-11-05,67,3.3,Admin Team,High,In Progress,2025-11-16 09:55:00
+17,T017,eBay Online,http://www.modelingonlineauctions.com/datasets,Machine Learning,2024-11-06,60,3.3,Technician,Medium,Open,2025-11-17 09:40:00
+18,T018,New Yorker Captions,https://github.com/nextml/caption-contest-data,Machine Learning,2024-11-07,49,3.3,Admin Team,High,In Progress,2025-11-18 10:25:00
+19,T019,Cooper-Hewitt's Collection,https://github.com/cooperhewitt/collection,Museums,2024-11-08,38,3.3,Technician,Medium,Open,2025-11-19 09:35:00
+20,T020,Minneapolis Institute,https://github.com/artsmia/collection,Museums,2024-11-09,27,3.3,Admin Team,High,In Progress,2025-11-20 10:10:00
+21,T021,Tate Collection,https://github.com/tategallery/collection,Museums,2025-04-05,16,3.3,Technician,Medium,Open,2025-11-21 09:50:00
+22,T022,Google 5gram,https://catalog.ldc.upenn.edu/LDC2006T13,Natural Language,2024-11-07,5,3.3,Admin Team,High,In Progress,2025-11-22 10:05:00
+23,T023,Arabic 30K articles,https://github.com/ParallelMazen/SaudiNewsNet,Natural Language,2024-11-01,67,3.3,Technician,Medium,Open,2025-11-23 09:45:00
+24,T024,USENET postings,http://www.psych.ualberta.ca/~westburylab/downloads/usenetcorpus.download.html,Natural Language,2024-11-02,56,2.3,Admin Team,High,In Progress,2025-11-24 10:20:00
+25,T025,Datahub.io,https://datahub.io/dataset,Search Engines,2024-11-02,45,2.3,Technician,Medium,Open,2025-11-25 09:55:00
+26,T026,Twitter Scrape CIKM,https://archive.org/details/twitter_cikm_2010,Social Networks,2024-11-01,34,2.3,Admin Team,High,In Progress,2025-11-26 10:10:00
+27,T027,Facebook Data,https://archive.org/details/oxford-2005-facebook-matrix,Social Networks,2024-11-05,23,2.3,Technician,Medium,Open,2025-11-27 09:40:00
+28,T028,LAW graphs,http://law.di.unimi.it/datasets.php,Social Networks,2024-11-06,12,2.3,Admin Team,High,In Progress,2025-11-28 10:05:00
+29,T029,Foursquare from,https://archive.org/details/201309_foursquare_dataset_umn,Social Networks,2024-11-07,1,2.3,Technician,Medium,Open,2025-11-29 09:50:00
+30,T030,Skytrax' Air,https://github.com/quankiquanki/skytrax-reviews-dataset,Social Networks,2024-11-08,23,2.3,Admin Team,High,In Progress,2025-11-30 10:15:00
+31,T031,Twitter Scrape,http://archive.org/details/2011-05-calufa-twitter-sql,Social Networks,2024-11-09,199,2.3,Technician,Medium,Open,2025-12-01 09:55:00
+32,T032,Youtube Video,http://netsg.cs.sfu.ca/youtubedata/,Social Networks,2025-04-05,375,2.3,Admin Team,High,In Progress,2025-12-02 10:05:00
+33,T033,FBI Hate Crime 2013,https://github.com/emorisse/FBI-Hate-Crime-Statistics/tree/master/2013,Social Sciences,2024-11-08,551,2.3,Technician,High,Open,2025-12-03 09:40:00
+34,T034,GSS,http://gss.norc.org,Social Sciences,2024-11-01,727,2.3,Admin Team,Medium,Open,2025-12-04 10:10:00
+35,T035,Texas Inmates,http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html,Social Sciences,2024-11-02,903,2.3,Technician,High,In Progress,2025-12-05 09:50:00
+36,T036,Formula 1,http://ergast.com/mrd/db,Sports,2024-11-02,1079,2.3,Admin Team,Medium,Open,2025-12-06 10:00:00
+37,T037,Pinhooker: Thoroughbred,https://github.com/phillc73/pinhooker,Sports,2024-11-01,1255,2.3,Technician,High,In Progress,2025-12-07 09:55:00
+38,T038,Airlines OD,http://stat-computing.org/dataexpo/2009/the-data.html,Transportation,2024-11-05,1431,2.3,Admin Team,Medium,Open,2025-12-08 10:10:00
+39,T039,BSS,https://github.com/BetaNYC/Bike-Share-Data-Best-Practices/wiki/Bike-Share-Data-Systems,Transportation,2024-11-06,1607,2.3,Technician,High,In Progress,2025-12-09 09:50:00
+40,T040,NYC Taxi,http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml,Transportation,2024-11-07,1783,2.3,Admin Team,Medium,Open,2025-12-10 10:05:00
+41,T041,FOIA/FOILed,https://archive.org/details/nycTaxiTripData2013,Transportation,2024-11-08,1959,2.3,Technician,High,In Progress,2025-12-11 09:45:00
+42,T042,NYC Uber,https://github.com/fivethirtyeight/uber-tlc-foil-response,Transportation,2024-11-09,2135,2.3,Admin Team,Medium,Open,2025-12-12 10:15:00
+43,T043,Open Traffic,https://github.com/graphhopper/open-traffic-collection,Transportation,2025-04-05,2311,2.3,Technician,High,In Progress,2025-12-13 09:50:00
+44,T044,Plane Crash,http://www.planecrashinfo.com/database.htm,Transportation,2024-11-09,2487,2.3,Admin Team,Medium,Open,2025-12-14 10:10:00
+45,T045,U.S. Domestic,http://academictorrents.com/details/a2ccf94bbb4af222bf8e69dad60a68a29f310d9a,Transportation,2024-11-01,2663,2.3,Technician,High,In Progress,2025-12-15 09:45:00
+46,T046,U.S. Freight,http://ops.fhwa.dot.gov/freight/freight_analysis/faf/index.htm,Transportation,2024-11-02,2839,2.3,Admin Team,Medium,Open,2025-12-16 10:05:00
+47,T047,Data Packaged,https://github.com/datasets/,Complementary Collections,2024-11-02,3015,3.4,Technician,High,In Progress,2025-12-17 09:55:00
+48,T048,USDA PLANTS,http://www.plants.usda.gov/dl_all.html,Agriculture,2024-11-01,3191,4.5,Admin Team,Medium,Open,2025-12-18 10:10:00
+49,T049,ClueWeb09,http://lemurproject.org/clueweb09/,Computer Networks,2024-11-05,3367,4.5,Technician,High,In Progress,2025-12-19 09:50:00
+50,T050,ClueWeb12,http://lemurproject.org/clueweb12/,Computer Networks,2024-11-06,3543,4.5,Admin Team,Medium,Open,2025-12-20 10:05:00
+51,T051,DEFRA Projects,http://randd.defra.gov.uk/,Energy,2024-11-07,3719,4.5,Technician,High,In Progress,2025-12-21 09:45:00
+52,T052,UK-DALE,http://www.doc.ic.ac.uk/~dk3810/data/,Energy,2024-11-08,3895,4.5,Admin Team,Medium,Open,2025-12-22 10:10:00
+53,T053,Landsat 8,https://aws.amazon.com/public-data-sets/landsat/,GIS,2024-11-09,4071,4.5,Technician,High,In Progress,2025-12-23 09:50:00
+54,T054,Reverse Geocode,https://github.com/kno10/reversegeocode,GIS,2025-04-05,4247,4.5,Admin Team,Medium,Open,2025-12-24 10:05:00
+55,T055,Faces Database,http://wilmabainbridge.com/facememorability2.html,Image Processing,2024-11-10,4423,4.5,Technician,High,In Progress,2025-12-25 09:55:00

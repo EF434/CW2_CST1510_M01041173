@@ -1,0 +1,55 @@
+id,ticket_id,priority,status,category,subject,description,created_date,resolved_date,assigned_to,created_at
+1,T001,Critical,Open,Hardware,Laptop not starting,User unable to boot device,2024-01-05,,Alice,2024-01-05 09:00:00
+2,T002,High,In Progress,Software,VPN connection failure,Cannot connect to VPN from home,2024-01-10,,Bob,2024-01-10 10:15:00
+3,T003,Medium,Resolved,Network,Email not syncing,Emails not appearing in inbox,2024-01-15,2024-01-16,Charlie,2024-01-15 11:30:00
+4,T004,Low,Closed,Hardware,Printer not responding,Printer gives error code E13,2024-01-20,2024-01-22,David,2024-01-20 12:45:00
+5,T005,Critical,Open,Software,Software installation request,Need latest software version installed,2024-01-25,,Eve,2024-01-25 09:20:00
+6,T006,High,In Progress,Network,Server downtime,Server unreachable since 2 AM,2024-01-28,,Alice,2024-01-28 10:40:00
+7,T007,Medium,Resolved,Security,Access denied,Cannot access shared folder,2024-02-02,2024-02-03,Bob,2024-02-02 11:50:00
+8,T008,Low,Closed,Database,Data backup issue,Backup failed for last night,2024-02-06,2024-02-07,Charlie,2024-02-06 13:10:00
+9,T009,Critical,Open,Hardware,Laptop not starting,Device hangs on login,2024-02-10,,David,2024-02-10 09:00:00
+10,T010,High,In Progress,Software,VPN connection failure,User cannot authenticate,2024-02-14,,Eve,2024-02-14 10:05:00
+11,T011,Medium,Resolved,Network,Email not syncing,Outgoing emails not delivered,2024-02-18,2024-02-19,Alice,2024-02-18 11:20:00
+12,T012,Low,Closed,Hardware,Printer not responding,Printer offline intermittently,2024-02-22,2024-02-23,Bob,2024-02-22 12:30:00
+13,T013,Critical,Open,Software,Software installation request,Installation fails with error code 404,2024-02-26,,Charlie,2024-02-26 09:40:00
+14,T014,High,In Progress,Network,Server downtime,Server CPU usage at 100%,2024-03-01,,David,2024-03-01 10:55:00
+15,T015,Medium,Resolved,Security,Access denied,Permissions missing on shared folder,2024-03-05,2024-03-06,Eve,2024-03-05 11:15:00
+16,T016,Low,Closed,Database,Data backup issue,Backup script failed due to disk full,2024-03-10,2024-03-11,Alice,2024-03-10 13:00:00
+17,T017,Critical,Open,Hardware,Laptop not starting,Screen freezes during boot,2024-03-15,,Bob,2024-03-15 09:30:00
+18,T018,High,In Progress,Software,VPN connection failure,VPN disconnects frequently,2024-03-20,,Charlie,2024-03-20 10:20:00
+19,T019,Medium,Resolved,Network,Email not syncing,Inbox not refreshing,2024-03-25,2024-03-26,David,2024-03-25 11:45:00
+20,T020,Low,Closed,Hardware,Printer not responding,Paper jam frequently,2024-03-30,2024-03-31,Eve,2024-03-30 12:10:00
+21,T021,Critical,Open,Software,Software installation request,License key not accepted,2024-04-04,,Alice,2024-04-04 09:05:00
+22,T022,High,In Progress,Network,Server downtime,Server unreachable from office network,2024-04-08,,Bob,2024-04-08 10:25:00
+23,T023,Medium,Resolved,Security,Access denied,User locked out of account,2024-04-12,2024-04-13,Charlie,2024-04-12 11:35:00
+24,T024,Low,Closed,Database,Data backup issue,Backup completed with warnings,2024-04-16,2024-04-17,David,2024-04-16 12:50:00
+25,T025,Critical,Open,Hardware,Laptop not starting,Laptop shuts down randomly,2024-04-20,,Eve,2024-04-20 09:15:00
+26,T026,High,In Progress,Software,VPN connection failure,Cannot connect after password reset,2024-04-24,,Alice,2024-04-24 10:35:00
+27,T027,Medium,Resolved,Network,Email not syncing,Spam folder not updating,2024-04-28,2024-04-29,Bob,2024-04-28 11:55:00
+28,T028,Low,Closed,Hardware,Printer not responding,Driver not compatible with OS,2024-05-02,2024-05-03,Charlie,2024-05-02 13:05:00
+29,T029,Critical,Open,Software,Software installation request,Installation hangs at 50%,2024-05-06,,David,2024-05-06 09:25:00
+30,T030,High,In Progress,Network,Server downtime,Database server offline,2024-05-10,,Eve,2024-05-10 10:45:00
+31,T031,Medium,Resolved,Security,Access denied,Cannot access VPN resources,2024-05-14,2024-05-15,Alice,2024-05-14 11:15:00
+32,T032,Low,Closed,Database,Data backup issue,Backup folder missing,2024-05-18,2024-05-19,Bob,2024-05-18 12:30:00
+33,T033,Critical,Open,Hardware,Laptop not starting,Laptop beeps 3 times on startup,2024-05-22,,Charlie,2024-05-22 09:10:00
+34,T034,High,In Progress,Software,VPN connection failure,Authentication server unreachable,2024-05-26,,David,2024-05-26 10:20:00
+35,T035,Medium,Resolved,Network,Email not syncing,Email filters not applied,2024-05-30,2024-05-31,Eve,2024-05-30 11:40:00
+36,T036,Low,Closed,Hardware,Printer not responding,Ink cartridge not recognized,2024-06-03,2024-06-04,Alice,2024-06-03 12:55:00
+37,T037,Critical,Open,Software,Software installation request,Missing dependencies during install,2024-06-07,,Bob,2024-06-07 09:20:00
+38,T038,High,In Progress,Network,Server downtime,Firewall blocks access,2024-06-11,,Charlie,2024-06-11 10:30:00
+39,T039,Medium,Resolved,Security,Access denied,Group policy prevents access,2024-06-15,2024-06-16,David,2024-06-15 11:50:00
+40,T040,Low,Closed,Database,Data backup issue,Backup script timed out,2024-06-19,2024-06-20,Eve,2024-06-19 12:15:00
+41,T041,Critical,Open,Hardware,Laptop not starting,Hard drive failure suspected,2024-06-23,,Alice,2024-06-23 09:35:00
+42,T042,High,In Progress,Software,VPN connection failure,Certificate expired,2024-06-27,,Bob,2024-06-27 10:50:00
+43,T043,Medium,Resolved,Network,Email not syncing,POP3 server down,2024-07-01,2024-07-02,Charlie,2024-07-01 11:15:00
+44,T044,Low,Closed,Hardware,Printer not responding,Network cable unplugged,2024-07-05,2024-07-06,David,2024-07-05 12:25:00
+45,T045,Critical,Open,Software,Software installation request,License expired,2024-07-09,,Eve,2024-07-09 09:05:00
+46,T046,High,In Progress,Network,Server downtime,Router malfunction,2024-07-13,,Alice,2024-07-13 10:20:00
+47,T047,Medium,Resolved,Security,Access denied,Two-factor authentication failed,2024-07-17,2024-07-18,Bob,2024-07-17 11:40:00
+48,T048,Low,Closed,Database,Data backup issue,Database locked during backup,2024-07-21,2024-07-22,Charlie,2024-07-21 12:55:00
+49,T049,Critical,Open,Hardware,Laptop not starting,Blue screen error,2024-07-25,,David,2024-07-25 09:15:00
+50,T050,High,In Progress,Software,VPN connection failure,VPN client crashes on launch,2024-07-29,,Eve,2024-07-29 10:35:00
+51,T051,Medium,Resolved,Network,Email not syncing,Server sync delayed,2024-08-02,2024-08-03,Alice,2024-08-02 11:50:00
+52,T052,Low,Closed,Hardware,Printer not responding,Out of toner,2024-08-06,2024-08-07,Bob,2024-08-06 12:10:00
+53,T053,Critical,Open,Software,Software installation request,Corrupted installer file,2024-08-10,,Charlie,2024-08-10 09:25:00
+54,T054,High,In Progress,Network,Server downtime,Power supply failure,2024-08-14,,David,2024-08-14 10:45:00

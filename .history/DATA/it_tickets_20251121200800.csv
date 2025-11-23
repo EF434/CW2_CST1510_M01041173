@@ -1,0 +1,56 @@
+id,ticket_id,priority,status,category,subject,description,created_date,resolved_date,assigned_to,created_at
+1,T001,High,Open,Biology,Microbiome Project,Investigate GitHub dataset,2024-11-01,2025-11-01,Technician,2025-11-01 09:00:00
+2,T002,Medium,Open,Biology,GloBI,Check species interaction dataset,2024-11-02,2025-11-02,Admin Team,2025-11-02 09:30:00
+3,T003,High,In Progress,Climate/Weather,Global Climate,Analyze climate dataset,2024-11-02,2025-11-03,Technician,2025-11-03 10:15:00
+4,T004,Medium,Open,Computer Networks,CommonCraw 2012,Review big data web pages dataset,2024-11-01,2025-11-04,Admin Team,2025-11-04 11:00:00
+5,T005,High,Open,Computer Networks,Indiana Webclicks,Analyze web click traffic,2024-11-05,2025-11-05,Technician,2025-11-05 09:45:00
+6,T006,High,In Progress,Computer Networks,Criteo click-through,Check click-through performance,2024-11-06,2025-11-06,Admin Team,2025-11-06 10:30:00
+7,T007,Medium,Open,Data Challenges,ICWSM 2009,Process ICWSM 2009 dataset,2024-11-07,2025-11-07,Technician,2025-11-07 09:50:00
+8,T008,High,Open,Data Challenges,KDD Cup,Review KDD Cup data,2024-11-08,2025-11-08,Admin Team,2025-11-08 10:20:00
+9,T009,High,In Progress,Data Challenges,Localytics Data,Analyze data visualization challenge,2024-11-09,2025-11-09,Technician,2025-11-09 11:10:00
+10,T010,Medium,Open,Data Challenges,Yelp Dataset,Check Yelp dataset,2024-04-05,2025-11-10,Admin Team,2025-11-10 09:40:00
+11,T011,High,In Progress,Data Challenges,Bruteforce Database,Test security dataset,2024-11-06,2025-11-11,Technician,2025-11-11 10:15:00
+12,T012,Medium,Open,GIS,Countries,Process country list dataset,2024-11-01,2025-11-12,Admin Team,2025-11-12 09:50:00
+13,T013,High,Open,GIS,TwoFishes,Analyze geolocation dataset,2024-11-02,2025-11-13,Technician,2025-11-13 10:05:00
+14,T014,High,In Progress,GIS,World countries,Check country boundaries,2024-11-02,2025-11-14,Admin Team,2025-11-14 09:30:00
+15,T015,Medium,Open,Government,Cities and countries,Review government datasets,2024-11-01,2025-11-15,Technician,2025-11-15 10:10:00
+16,T016,High,In Progress,Healthcare,Ebola cases,Analyze Ebola 2014 dataset,2024-11-05,2025-11-16,Admin Team,2025-11-16 09:55:00
+17,T017,Medium,Open,Machine Learning,eBay Online,Process eBay auctions dataset,2024-11-06,2025-11-17,Technician,2025-11-17 09:40:00
+18,T018,High,In Progress,Machine Learning,New Yorker Captions,Analyze caption contest data,2024-11-07,2025-11-18,Admin Team,2025-11-18 10:25:00
+19,T019,Medium,Open,Museums,Cooper-Hewitt's Collection,Check museum dataset,2024-11-08,2025-11-19,Technician,2025-11-19 09:35:00
+20,T020,High,In Progress,Museums,Minneapolis Institute,Review collection dataset,2024-11-09,2025-11-20,Admin Team,2025-11-20 10:10:00
+21,T021,Medium,Open,Museums,Tate Collection,Analyze art collection,2025-04-05,2025-11-21,Technician,2025-11-21 09:50:00
+22,T022,High,In Progress,Natural Language,Google 5gram,Check 5gram dataset,2024-11-07,2025-11-22,Admin Team,2025-11-22 10:05:00
+23,T023,Medium,Open,Natural Language,Arabic 30K articles,Analyze Arabic news dataset,2024-11-01,2025-11-23,Technician,2025-11-23 09:45:00
+24,T024,High,In Progress,Natural Language,USENET postings,Process USENET corpus,2024-11-02,2025-11-24,Admin Team,2025-11-24 10:20:00
+25,T025,Medium,Open,Search Engines,Datahub.io,Check Datahub datasets,2024-11-02,2025-11-25,Technician,2025-11-25 09:55:00
+26,T026,High,In Progress,Social Networks,Twitter Scrape CIKM,Analyze Twitter scrape 2010,2024-11-01,2025-11-26,Admin Team,2025-11-26 10:10:00
+27,T027,Medium,Open,Social Networks,Facebook Data,Review Facebook dataset,2024-11-05,2025-11-27,Technician,2025-11-27 09:40:00
+28,T028,High,In Progress,Social Networks,LAW graphs,Analyze law network graphs,2024-11-06,2025-11-28,Admin Team,2025-11-28 10:05:00
+29,T029,Medium,Open,Social Networks,Foursquare from,Check Foursquare dataset,2024-11-07,2025-11-29,Technician,2025-11-29 09:50:00
+30,T030,High,In Progress,Social Networks,Skytrax' Air,Analyze airline reviews,2024-11-08,2025-11-30,Admin Team,2025-11-30 10:15:00
+31,T031,Medium,Open,Social Networks,Twitter Scrape,Review Twitter dataset,2024-11-09,2025-12-01,Technician,2025-12-01 09:55:00
+32,T032,High,In Progress,Social Networks,Youtube Video,Process YouTube data,2025-04-05,2025-12-02,Admin Team,2025-12-02 10:05:00
+33,T033,High,Open,Social Sciences,FBI Hate Crime 2013,Analyze FBI dataset,2024-11-08,2025-12-03,Technician,2025-12-03 09:40:00
+34,T034,Medium,Open,Social Sciences,GSS,Check General Social Survey,2024-11-01,2025-12-04,Admin Team,2025-12-04 10:10:00
+35,T035,High,In Progress,Social Sciences,Texas Inmates,Process Texas inmate data,2024-11-02,2025-12-05,Technician,2025-12-05 09:50:00
+36,T036,Medium,Open,Sports,Formula 1,Review F1 dataset,2024-11-02,2025-12-06,Admin Team,2025-12-06 10:00:00
+37,T037,High,In Progress,Sports,Pinhooker: Thoroughbred,Analyze thoroughbred data,2024-11-01,2025-12-07,Technician,2025-12-07 09:55:00
+38,T038,Medium,Open,Transportation,Airlines OD,Check airline OD data,2024-11-05,2025-12-08,Admin Team,2025-12-08 10:10:00
+39,T039,High,In Progress,Transportation,BSS,Analyze bike-share system,2024-11-06,2025-12-09,Technician,2025-12-09 09:50:00
+40,T040,Medium,Open,Transportation,NYC Taxi,Review taxi trip data,2024-11-07,2025-12-10,Admin Team,2025-12-10 10:05:00
+41,T041,High,In Progress,Transportation,FOIA/FOILed,Analyze NYC FOIA data,2024-11-08,2025-12-11,Technician,2025-12-11 09:45:00
+42,T042,Medium,Open,Transportation,NYC Uber,Check Uber trip data,2024-11-09,2025-12-12,Admin Team,2025-12-12 10:15:00
+43,T043,High,In Progress,Transportation,Open Traffic,Analyze traffic dataset,2025-04-05,2025-12-13,Technician,2025-12-13 09:50:00
+44,T044,Medium,Open,Transportation,Plane Crash,Review crash data,2024-11-09,2025-12-14,Admin Team,2025-12-14 10:10:00
+45,T045,High,In Progress,Transportation,U.S. Domestic,Analyze domestic travel,2024-11-01,2025-12-15,Technician,2025-12-15 09:45:00
+46,T046,Medium,Open,Transportation,U.S. Freight,Check freight data,2024-11-02,2025-12-16,Admin Team,2025-12-16 10:05:00
+47,T047,High,In Progress,Complementary Collections,Data Packaged,Process public datasets,2024-11-02,2025-12-17,Technician,2025-12-17 09:55:00
+48,T048,Medium,Open,Agriculture,USDA PLANTS,Review plant species dataset,2024-11-01,2025-12-18,Admin Team,2025-12-18 10:10:00
+49,T049,High,In Progress,Computer Networks,ClueWeb09,Analyze ClueWeb09 dataset,2024-11-05,2025-12-19,Technician,2025-12-19 09:50:00
+50,T050,Medium,Open,Computer Networks,ClueWeb12,Check ClueWeb12 data,2024-11-06,2025-12-20,Admin Team,2025-12-20 10:05:00
+51,T051,High,In Progress,Energy,DEFRA Projects,Review DEFRA projects dataset,2024-11-07,2025-12-21,Technician,2025-12-21 09:45:00
+52,T052,Medium,Open,Energy,UK-DALE,Analyze energy dataset,2024-11-08,2025-12-22,Admin Team,2025-12-22 10:10:00
+53,T053,High,In Progress,GIS,Landsat 8,Process Landsat satellite images,2024-11-09,2025-12-23,Technician,2025-12-23 09:50:00
+54,T054,Medium,Open,GIS,Reverse Geocode,Check reverse geocode dataset,2025-04-05,2025-12-24,Admin Team,2025-12-24 10:05:00
+55,T055,High,In Progress,Image Processing,Faces Database,Analyze facial dataset,2024-11-10,2025-12-25,Technician,2025-12-25 09:55:00

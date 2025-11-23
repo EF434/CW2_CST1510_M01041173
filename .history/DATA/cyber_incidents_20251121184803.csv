@@ -1,0 +1,21 @@
+id,date,incident_type,severity,status,description,reported_by,created_at
+1,2025-09-15,Phishing,Critical,Open,Targeted spear-phishing email to finance team,alice,2025-09-15 09:00:00
+2,2025-09-16,Phishing,High,Investigating,Multiple phishing attempts detected via email gateway,bob,2025-09-16 10:30:00
+3,2025-09-17,Malware,High,Resolved,Malicious attachment quarantined,charlie,2025-09-17 11:00:00
+4,2025-09-18,DDoS,Medium,Closed,Website experienced temporary DDoS attack,diana,2025-09-18 14:15:00
+5,2025-09-19,Phishing,High,Open,Credential phishing via fake login portal,emma,2025-09-19 09:45:00
+6,2025-09-20,Ransomware,Critical,Investigating,Ransomware detected on HR server,frank,2025-09-20 12:00:00
+7,2025-09-21,Phishing,High,Open,Spear-phishing targeting executive emails,alice,2025-09-21 10:00:00
+8,2025-09-22,Malware,Medium,Resolved,Trojan found on employee laptop,bob,2025-09-22 11:15:00
+9,2025-09-23,DDoS,Medium,Closed,Distributed denial-of-service mitigated,charlie,2025-09-23 13:30:00
+10,2025-09-24,Insider Threat,High,Investigating,Unauthorized access to confidential files,diana,2025-09-24 15:00:00
+11,2025-09-25,Phishing,Critical,Open,Targeted phishing campaign on IT staff,emma,2025-09-25 09:30:00
+12,2025-09-26,Phishing,High,Open,Multiple reports of phishing via Teams,frank,2025-09-26 10:45:00
+13,2025-09-27,Malware,Medium,Resolved,Rogue software installation detected,alice,2025-09-27 11:15:00
+14,2025-09-28,DDoS,High,Closed,Attack on public API endpoints,bob,2025-09-28 14:00:00
+15,2025-09-29,Phishing,High,Open,Phishing emails with malicious links,charlie,2025-09-29 09:50:00
+16,2025-09-30,Ransomware,Critical,Investigating,Ransomware attempt blocked,diana,2025-09-30 12:30:00
+17,2025-10-01,Phishing,High,Open,Phishing targeting accounting emails,emma,2025-10-01 09:40:00
+18,2025-10-02,Phishing,Critical,Open,Spear-phishing targeting executives,frank,2025-10-02 10:20:00
+19,2025-10-03,Malware,Medium,Resolved,Keylogger detected on workstation,alice,2025-10-03 11:00:00
+20,2025-10-04,DDoS,Medium,Closed,Temporary denial-of-service to API servers,bob,2025-10-04 13:15:00
