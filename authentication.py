@@ -146,23 +146,29 @@ def register_user(username: str, password: str, role: str = None) -> bool:
        Register a user with a specific role (user, admin, analyst).
 
 
-    '''   
-    # Check if user already exists
+    '''    
+    # Check if the username already exists
     if user_exists(username):
-        print(f"❌ Username '{username}' already exists.")
+        print(f"Error: Username '{username}' already exists.")
         return False
-
+    
     # Hash the password
     hashed_password = hash_password(password)
 
-    # Validate role
+    # --- Challenge 2: User Role System
+    # Validate role input
     available_roles = ["user", "admin", "analyst"]
-    if role not in available_roles:
-        print(f"⚠️ Invalid role '{role}'. Assigning default role 'user'.")
+
+    # Available roles
+    available_roles = ["user", "admin", "analyst"]
+
+    # Use provided role if valid
+    if role and role.lower() in available_roles:
+        role = role.lower()
+    else:
+        # Fallback to default role
         role = "user"
 
-    # Ensure DATA folder exists
-    USER_DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     # Append the new user to the file
     # Format: username, hashed_password, role (updated format for Challenge 2)
     try:

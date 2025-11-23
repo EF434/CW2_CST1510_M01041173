@@ -1,6 +1,6 @@
 # Import requried modules
 import streamlit as st
-from auth import (
+from authentication import (
     register_user,
     login_user,
     user_exists,
