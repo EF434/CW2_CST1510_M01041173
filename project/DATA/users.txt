@@ -1,0 +1,2 @@
+Emaan,$2b$12$RdTGZb8obp5FBEaIX7koCOpHj65n6j5qzdevCTVEW9eP.cS6FcIvq,user
+Alice,$2b$12$Ds1vfWhEfTd.k7FNnYodBuIvcnvPdB/5uNTUe.kr6nWkbva5yq2Pe,admin
