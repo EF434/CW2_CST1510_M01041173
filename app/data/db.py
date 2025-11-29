@@ -78,3 +78,41 @@ def load_all_csv_data(conn, csv_path, table_name):
     except Exception as e:
         print(f"⚠️ Error loading '{table_name}' from '{csv_path}': {e}")
         return 0
+
+# -------------------------------
+# Save a chat message
+# -------------------------------
+def save_message(conn, username, domain, role, content):
+    """
+    Save a chat message directly using username.
+    """
+    try:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO chat_history (user_id, domain, role, content)
+            VALUES (?, ?, ?, ?)
+        """, (username, domain, role, content))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"⚠️ Error saving message: {e}")
+
+# -------------------------------
+# Load chat messages
+# -------------------------------
+def load_messages(conn, username, domain):
+    """
+    Load chat messages for a given username and domain.
+    Returns list of dicts [{"role": ..., "content": ...}, ...]
+    """
+    try:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT role, content FROM chat_history
+            WHERE user_id = ? AND domain = ?
+            ORDER BY id ASC
+        """, (username, domain))
+        rows = cursor.fetchall()
+        return [{"role": r[0], "content": r[1]} for r in rows]
+    except sqlite3.Error as e:
+        print(f"⚠️ Error loading messages: {e}")
+        return []

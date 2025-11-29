@@ -1,60 +1,501 @@
 dataset_name,category,source,last_updated,record_count,file_size_mb
-Threat Intel Logs Q1 2025,Threat Intelligence,External Threat Feed,2025-11-01,250000,120.5
-Corporate Network Logs Apr-May 2025,Network Logs,Internal SIEM,2025-10-28,1500000,950.0
-Endpoint Security Events Mar 2025,Endpoint Monitoring,Internal EDR,2025-10-30,500000,320.2
-Phishing Campaign Data Oct 2025,Threat Intelligence,External Security Vendor,2025-11-10,12000,5.5
-Firewall Logs Sep-Oct 2025,Network Logs,Internal Firewall,2025-10-25,800000,480.0
-Malware Samples Archive,Threat Intelligence,Open Malware Repo,2025-11-12,40000,250.7
-User Access Logs Oct 2025,Access Logs,Internal AD,2025-11-05,1000000,600.0
-Dark Web Threat Reports,Threat Intelligence,External Dark Web Feed,2025-10-20,8500,15.3
-VPN Connection Logs Sep 2025,Network Logs,Internal VPN,2025-10-15,450000,280.0
-Email Security Logs Oct 2025,Endpoint Monitoring,Internal Email Gateway,2025-11-08,300000,180.2
-Internal Asset Inventory 2025,Asset Management,Internal CMDB,2025-11-01,7500,12.0
-IoT Device Logs Sep-Oct 2025,Endpoint Monitoring,Internal IoT Platform,2025-10-30,120000,60.5
-Web Proxy Logs Q3-Q4 2025,Network Logs,Internal Proxy,2025-11-03,950000,450.0
-Threat Intelligence Alerts Nov 2025,Threat Intelligence,External Threat Feed,2025-11-13,15000,10.7
-Security Patch Compliance Oct 2025,Compliance,Internal SCCM,2025-11-05,5000,8.3
-Database Access Logs Sep-Oct 2025,Access Logs,Internal DB,2025-10-28,600000,350.0
-Cloud Access Logs Oct 2025,Access Logs,Internal Cloud Platform,2025-11-09,400000,210.0
-Incident Reports Archive 2025,Incident Management,Internal SOC,2025-10-30,850,3.2
-External Vulnerability Feeds Nov 2025,Threat Intelligence,External Security Vendor,2025-11-12,20000,18.0
-Employee Login Attempts Oct 2025,Access Logs,Internal AD,2025-11-06,1200000,650.0
-Data Loss Prevention Logs Sep 2025,Endpoint Monitoring,Internal DLP,2025-10-25,250000,140.0
-SIEM Correlation Rules 2025,Network Logs,Internal SIEM,2025-11-02,1500,5.0
-Web Application Firewall Logs Oct 2025,Network Logs,Internal WAF,2025-11-04,500000,300.0
-Endpoint Antivirus Scan Results Oct 2025,Endpoint Monitoring,Internal EDR,2025-11-07,600000,350.0
-External Malware Reports Nov 2025,Threat Intelligence,External Malware Repo,2025-11-10,18000,12.5
-Privilege Escalation Alerts Sep-Oct 2025,Access Logs,Internal AD,2025-10-29,3500,2.1
-Security Awareness Quiz Results Q3 2025,Compliance,Internal LMS,2025-10-31,2000,1.2
-Internal Vulnerability Scan Reports Oct 2025,Threat Intelligence,Internal Scanner,2025-11-06,7500,15.0
-Cloud Security Posture Data Oct 2025,Compliance,Internal Cloud Platform,2025-11-09,5000,9.8
-IoT Vulnerability Alerts Sep 2025,Threat Intelligence,Internal IoT Platform,2025-10-20,1200,1.5
-Network Configuration Backup Sep 2025,Network Logs,Internal Network,2025-10-15,350,4.0
-Privileged Account Audit Oct 2025,Access Logs,Internal AD,2025-11-05,2200,3.3
-External Phishing Reports Nov 2025,Threat Intelligence,External Security Vendor,2025-11-11,9000,6.2
-Application Error Logs Sep-Oct 2025,Network Logs,Internal App Platform,2025-10-28,150000,80.0
-Security Incident Tickets 2025,Incident Management,Internal SOC,2025-11-01,1200,7.5
-Patch Deployment Logs Oct 2025,Compliance,Internal SCCM,2025-11-06,3500,12.0
-VPN Anomaly Detection Sep 2025,Network Logs,Internal VPN,2025-10-18,45000,25.0
-Email Phishing Simulation Results Q3 2025,Compliance,Internal SOC,2025-10-30,1000,1.1
-Privileged Session Logs Sep-Oct 2025,Access Logs,Internal PAM,2025-10-27,7500,4.8
-External Threat Bulletin Nov 2025,Threat Intelligence,External Dark Web Feed,2025-11-12,8000,7.0
-Endpoint Configuration Audit Oct 2025,Endpoint Monitoring,Internal EDR,2025-11-08,220000,125.0
-Database Change Logs Sep-Oct 2025,Access Logs,Internal DB,2025-10-26,60000,40.0
-Network Traffic Anomalies Sep 2025,Network Logs,Internal Firewall,2025-10-20,95000,55.0
-Cloud Resource Inventory Oct 2025,Asset Management,Internal Cloud Platform,2025-11-03,1800,10.0
-Internal Security Reports 2025,Incident Management,Internal SOC,2025-11-02,3000,18.0
-IoT Device Security Audit Oct 2025,Endpoint Monitoring,Internal IoT Platform,2025-11-04,950,5.0
-Threat Actor Activity Reports Nov 2025,Threat Intelligence,External Dark Web Feed,2025-11-12,12000,10.5
-Endpoint Patch Status Oct 2025,Compliance,Internal EDR,2025-11-07,180000,95.0
-Application Usage Logs Sep-Oct 2025,Network Logs,Internal App Platform,2025-10-28,75000,38.0
-Firewall Rule Change Logs Sep-Oct 2025,Network Logs,Internal Firewall,2025-10-25,22000,12.5
-User Permission Changes Oct 2025,Access Logs,Internal AD,2025-11-06,1200,1.8
-Internal Threat Analysis Reports 2025,Threat Intelligence,Internal SOC,2025-11-05,3500,20.0
-Cloud Security Alerts Oct 2025,Threat Intelligence,Internal Cloud Platform,2025-11-09,4200,25.0
-Endpoint Security Policy Updates Oct 2025,Compliance,Internal EDR,2025-11-07,1800,2.5
-IT Asset Health Logs Sep-Oct 2025,Asset Management,Internal CMDB,2025-10-27,3200,18.5
-Database Performance Metrics Oct 2025,Access Logs,Internal DB,2025-11-03,25000,30.0
-Email Gateway Logs Oct 2025,Network Logs,Internal Email Gateway,2025-11-08,200000,110.0
-Internal SOC Investigation Logs 2025,Incident Management,Internal SOC,2025-11-06,800,5.2
-Cloud Backup Reports Sep-Oct 2025,Asset Management,Internal Cloud Platform,2025-10-28,900,6.0
+Cyber Logs 2025 Q2,Cyber,External Feed,2025-03-13,869791,1356.63
+Cyber Sensor Data 2025 Q1,Cyber,Internal System,2025-02-17,1844068,473.0
+IT Sensor Data 2024 Q4,IT,External Feed,2025-08-18,4953118,563.6
+IT Feed 2024 Q4,IT,API,2025-05-23,1314256,438.47
+R&D Logs 2024 Q4,R&D,Internal System,2025-07-03,2895309,1211.41
+IT Records 2025 Q1,IT,Public Dataset,2025-02-10,4640852,593.42
+R&D Sensor Data 2024 Q1,R&D,Internal System,2025-04-27,2437562,1970.59
+HR Feed 2024 Q4,HR,API,2025-08-21,3070434,333.68
+R&D Transactions 2025 Q1,R&D,Survey Tool,2025-11-22,1445615,1072.94
+HR Transactions 2025 Q4,HR,API,2025-11-24,4682033,447.03
+R&D Feed 2024 Q2,R&D,Internal System,2025-06-11,3375214,542.8
+HR Sensor Data 2025 Q2,HR,IoT Sensors,2025-09-13,3328800,1770.52
+Sales Transactions 2025 Q2,Sales,External Feed,2025-10-15,4531269,532.86
+Operations Sensor Data 2025 Q3,Operations,External Feed,2025-03-12,4284216,992.1
+IT Feed 2024 Q2,IT,IoT Sensors,2025-03-23,3551334,1196.85
+Operations Survey Data 2025 Q3,Operations,Survey Tool,2025-01-06,970929,1366.6
+Marketing Feed 2025 Q1,Marketing,API,2025-08-11,1336723,912.91
+Marketing Sensor Data 2024 Q1,Marketing,IoT Sensors,2025-06-02,4268584,1221.85
+Finance Analytics 2024 Q1,Finance,Survey Tool,2025-06-15,4108721,48.76
+R&D Feed 2025 Q2,R&D,Internal System,2025-05-04,4769334,1894.43
+Cyber Records 2025 Q1,Cyber,Survey Tool,2025-03-06,1087025,1322.9
+Finance Analytics 2025 Q2,Finance,Survey Tool,2025-04-13,2624865,803.99
+R&D Survey Data 2025 Q1,R&D,External Feed,2025-04-26,547088,682.79
+HR Sensor Data 2024 Q1,HR,Internal System,2025-11-20,503868,465.59
+IT Feed 2025 Q1,IT,Survey Tool,2025-05-02,2346036,1341.27
+HR Sensor Data 2024 Q4,HR,External Feed,2025-08-31,3424666,388.92
+Cyber Records 2025 Q3,Cyber,Public Dataset,2025-07-30,3927686,1729.04
+IT Records 2024 Q1,IT,Public Dataset,2025-06-23,926615,504.83
+HR Sensor Data 2025 Q2,HR,Public Dataset,2025-04-04,2346606,930.63
+Cyber Survey Data 2024 Q1,Cyber,IoT Sensors,2025-10-04,133797,1938.3
+HR Transactions 2025 Q4,HR,Public Dataset,2025-04-20,3374169,1805.86
+Finance Survey Data 2024 Q4,Finance,API,2025-08-21,2402843,851.78
+Sales Transactions 2024 Q3,Sales,External Feed,2025-01-30,4868516,1474.12
+IT Records 2025 Q1,IT,Internal System,2025-10-27,4009591,1010.67
+Finance Logs 2024 Q2,Finance,Internal System,2025-11-01,580097,1353.67
+HR Survey Data 2024 Q2,HR,Survey Tool,2025-11-01,343377,1242.57
+Operations Records 2025 Q3,Operations,External Feed,2025-06-10,2012242,538.57
+Finance Records 2025 Q4,Finance,API,2025-02-07,88143,921.99
+Cyber Logs 2024 Q3,Cyber,External Feed,2025-06-28,587063,1759.75
+R&D Analytics 2024 Q4,R&D,Survey Tool,2025-06-04,4447076,25.57
+Marketing Records 2024 Q2,Marketing,API,2025-03-01,907882,1487.41
+Finance Analytics 2025 Q2,Finance,IoT Sensors,2025-06-25,1717898,1378.12
+Marketing Sensor Data 2025 Q3,Marketing,Internal System,2025-02-17,3563211,1660.4
+IT Logs 2025 Q2,IT,IoT Sensors,2025-05-15,1365447,1485.05
+Operations Sensor Data 2024 Q1,Operations,Internal System,2025-03-18,4586743,81.7
+R&D Sensor Data 2024 Q4,R&D,External Feed,2025-01-22,2595858,735.66
+IT Analytics 2024 Q2,IT,IoT Sensors,2025-02-22,2976871,1562.43
+Operations Sensor Data 2024 Q2,Operations,External Feed,2025-04-01,3468576,59.32
+R&D Feed 2025 Q2,R&D,API,2025-03-23,916771,771.26
+IT Feed 2025 Q2,IT,External Feed,2025-08-24,2943147,617.33
+HR Transactions 2024 Q2,HR,Public Dataset,2025-06-18,2347091,1730.06
+Marketing Analytics 2025 Q3,Marketing,Internal System,2025-03-01,2201231,365.35
+Marketing Logs 2024 Q4,Marketing,API,2025-06-10,3670737,1216.36
+Cyber Survey Data 2024 Q3,Cyber,Internal System,2025-08-12,24187,1044.64
+HR Analytics 2025 Q1,HR,IoT Sensors,2025-06-19,2643315,1330.14
+Cyber Records 2025 Q3,Cyber,IoT Sensors,2025-07-29,2746220,810.78
+Marketing Sensor Data 2024 Q2,Marketing,Public Dataset,2025-07-14,1469847,1234.87
+Marketing Survey Data 2024 Q3,Marketing,API,2025-04-18,3616163,1573.66
+R&D Survey Data 2025 Q4,R&D,IoT Sensors,2025-04-20,4298038,951.64
+Finance Records 2024 Q3,Finance,Survey Tool,2025-11-21,2821762,195.84
+HR Records 2025 Q2,HR,External Feed,2025-03-17,214895,101.97
+Sales Sensor Data 2024 Q4,Sales,Public Dataset,2025-11-19,4839077,396.93
+Operations Survey Data 2025 Q2,Operations,External Feed,2025-01-03,904119,1559.06
+HR Transactions 2025 Q1,HR,Survey Tool,2025-05-08,1028029,918.36
+Sales Records 2025 Q4,Sales,Survey Tool,2025-09-16,3589760,1662.83
+Sales Transactions 2025 Q4,Sales,API,2025-05-07,2336256,1533.97
+Sales Records 2024 Q3,Sales,Public Dataset,2025-02-09,2406861,476.64
+R&D Analytics 2024 Q2,R&D,External Feed,2025-04-29,3223132,1390.96
+HR Logs 2025 Q4,HR,API,2025-10-05,3918456,837.39
+HR Feed 2025 Q4,HR,Survey Tool,2025-01-11,4839240,766.96
+IT Analytics 2025 Q4,IT,Public Dataset,2025-10-03,4591289,1601.74
+HR Survey Data 2024 Q3,HR,Public Dataset,2025-09-06,253477,783.83
+Operations Records 2024 Q4,Operations,External Feed,2025-11-15,4490553,63.66
+Operations Sensor Data 2024 Q1,Operations,IoT Sensors,2025-08-08,1148329,1735.03
+Finance Logs 2025 Q4,Finance,API,2025-04-19,3824294,660.42
+Operations Analytics 2025 Q3,Operations,Internal System,2025-08-29,172598,1500.56
+IT Analytics 2024 Q1,IT,IoT Sensors,2025-01-21,270298,1899.73
+HR Feed 2024 Q2,HR,External Feed,2025-03-06,3982518,1342.22
+HR Survey Data 2025 Q3,HR,External Feed,2025-11-07,970771,1557.81
+Finance Analytics 2024 Q1,Finance,API,2025-10-22,3158302,799.34
+HR Logs 2024 Q1,HR,IoT Sensors,2025-06-04,1025483,1594.49
+IT Analytics 2025 Q3,IT,Internal System,2025-09-17,2872454,35.18
+Operations Feed 2025 Q1,Operations,Public Dataset,2025-07-05,3866573,1417.54
+Operations Transactions 2025 Q4,Operations,Public Dataset,2025-08-12,4980037,544.11
+HR Feed 2024 Q3,HR,Public Dataset,2025-05-05,3908257,1144.0
+Operations Analytics 2024 Q4,Operations,API,2025-04-04,4099865,432.12
+Marketing Analytics 2025 Q3,Marketing,Survey Tool,2025-01-06,4343783,1896.64
+Cyber Transactions 2025 Q4,Cyber,Survey Tool,2025-05-04,4003758,1295.35
+Sales Survey Data 2024 Q1,Sales,API,2025-04-24,3402362,1386.66
+Marketing Records 2025 Q4,Marketing,Survey Tool,2025-09-29,2893646,856.75
+R&D Analytics 2025 Q3,R&D,API,2025-05-09,1943893,250.11
+HR Analytics 2024 Q2,HR,External Feed,2025-04-21,4071752,560.23
+Marketing Logs 2024 Q3,Marketing,External Feed,2025-07-04,1515264,611.51
+Finance Analytics 2024 Q1,Finance,Survey Tool,2025-05-30,1069309,1279.36
+Sales Logs 2024 Q3,Sales,Public Dataset,2025-09-03,3704920,688.0
+IT Analytics 2025 Q1,IT,Internal System,2025-07-25,4135069,157.42
+IT Transactions 2024 Q3,IT,Internal System,2025-05-08,1003643,1120.57
+Operations Sensor Data 2024 Q4,Operations,Public Dataset,2025-08-15,2504378,1721.73
+Operations Analytics 2024 Q1,Operations,External Feed,2025-11-17,1780207,536.65
+Cyber Transactions 2024 Q2,Cyber,Survey Tool,2025-02-08,1323090,15.32
+Sales Records 2025 Q3,Sales,Internal System,2025-04-29,2426798,1416.84
+Sales Logs 2024 Q3,Sales,IoT Sensors,2025-10-29,1669427,856.03
+HR Records 2024 Q3,HR,External Feed,2025-02-06,510280,340.19
+Marketing Sensor Data 2025 Q4,Marketing,Internal System,2025-08-28,2560901,1402.47
+Marketing Sensor Data 2025 Q4,Marketing,Internal System,2025-11-03,344376,1779.95
+R&D Sensor Data 2025 Q1,R&D,Internal System,2025-04-28,4835119,1178.37
+IT Feed 2025 Q1,IT,External Feed,2025-08-29,4363384,1306.5
+Marketing Transactions 2025 Q4,Marketing,Internal System,2025-08-29,2928908,822.61
+R&D Records 2024 Q2,R&D,API,2025-07-30,4166295,583.55
+Operations Feed 2024 Q4,Operations,Internal System,2025-06-11,2127275,653.31
+Operations Feed 2024 Q4,Operations,Public Dataset,2025-01-28,1583556,1041.69
+Sales Records 2025 Q1,Sales,External Feed,2025-05-17,4617188,270.72
+Marketing Survey Data 2025 Q1,Marketing,Internal System,2025-11-19,2017372,1422.47
+Marketing Sensor Data 2024 Q4,Marketing,Internal System,2025-04-26,961780,928.28
+Cyber Records 2024 Q4,Cyber,IoT Sensors,2025-05-30,4278727,1413.77
+Operations Feed 2025 Q4,Operations,External Feed,2025-08-22,4634346,297.84
+HR Sensor Data 2024 Q1,HR,API,2025-08-01,2861080,1869.15
+Marketing Feed 2024 Q3,Marketing,IoT Sensors,2025-06-02,4933590,1164.05
+Sales Feed 2024 Q4,Sales,Survey Tool,2025-09-05,2905109,671.56
+Operations Survey Data 2025 Q2,Operations,IoT Sensors,2025-05-03,4806586,772.11
+Operations Logs 2025 Q4,Operations,IoT Sensors,2025-07-15,3248663,1976.94
+Finance Survey Data 2024 Q2,Finance,Survey Tool,2025-10-30,2794973,1740.7
+Sales Logs 2025 Q1,Sales,IoT Sensors,2025-03-15,3449149,1743.16
+Finance Logs 2025 Q3,Finance,API,2025-11-16,3344331,1303.17
+R&D Feed 2025 Q3,R&D,IoT Sensors,2025-09-07,4548371,81.44
+Cyber Transactions 2025 Q2,Cyber,IoT Sensors,2025-02-16,3650416,1956.89
+Cyber Survey Data 2024 Q3,Cyber,Internal System,2025-01-24,2731051,1594.33
+Marketing Analytics 2025 Q4,Marketing,External Feed,2025-05-06,4465746,829.98
+Finance Transactions 2024 Q1,Finance,Survey Tool,2025-07-15,2030226,1000.36
+Finance Transactions 2025 Q3,Finance,Public Dataset,2025-05-11,88831,1798.83
+Sales Analytics 2024 Q1,Sales,Public Dataset,2025-06-26,4938908,605.32
+Operations Records 2025 Q4,Operations,API,2025-04-12,3237040,1708.14
+Cyber Transactions 2025 Q3,Cyber,Survey Tool,2025-06-01,2486575,53.66
+Operations Analytics 2024 Q1,Operations,Survey Tool,2025-09-12,2410770,1553.72
+HR Sensor Data 2025 Q2,HR,IoT Sensors,2025-04-08,2112409,1358.75
+Finance Records 2024 Q1,Finance,API,2025-08-14,289881,1163.35
+Finance Logs 2025 Q3,Finance,IoT Sensors,2025-08-01,1483375,409.58
+R&D Sensor Data 2025 Q2,R&D,API,2025-09-04,2485825,1495.65
+R&D Feed 2024 Q4,R&D,Internal System,2025-03-14,1902593,1721.68
+Operations Feed 2025 Q1,Operations,Public Dataset,2025-01-08,2228439,1077.78
+Sales Analytics 2025 Q4,Sales,IoT Sensors,2025-07-10,918872,1352.92
+Sales Logs 2025 Q2,Sales,IoT Sensors,2025-02-02,3904558,1819.68
+Marketing Records 2025 Q1,Marketing,External Feed,2025-01-24,322157,615.69
+Sales Logs 2024 Q2,Sales,Survey Tool,2025-03-11,3270197,912.75
+Operations Sensor Data 2024 Q4,Operations,IoT Sensors,2025-02-20,4114940,1235.15
+Marketing Logs 2025 Q2,Marketing,Public Dataset,2025-08-16,1990656,1712.35
+Cyber Records 2025 Q3,Cyber,Internal System,2025-07-23,2324261,387.72
+Cyber Feed 2025 Q1,Cyber,IoT Sensors,2025-04-19,189159,110.65
+R&D Transactions 2024 Q2,R&D,Internal System,2025-10-11,1747761,1176.9
+HR Analytics 2024 Q1,HR,API,2025-03-16,1100453,1085.03
+Finance Logs 2024 Q2,Finance,Internal System,2025-07-03,2005914,1181.82
+IT Transactions 2025 Q1,IT,External Feed,2025-08-04,4423125,236.16
+Cyber Survey Data 2025 Q3,Cyber,Survey Tool,2025-10-31,924811,909.49
+HR Sensor Data 2024 Q3,HR,Public Dataset,2025-11-26,271310,131.04
+Sales Feed 2025 Q4,Sales,IoT Sensors,2025-02-25,4122673,1427.68
+Sales Logs 2024 Q3,Sales,Survey Tool,2025-03-17,560982,261.12
+R&D Survey Data 2025 Q4,R&D,Survey Tool,2025-11-06,3618773,207.37
+Cyber Feed 2024 Q4,Cyber,Public Dataset,2025-04-27,3481319,684.47
+Sales Survey Data 2025 Q1,Sales,API,2025-08-07,2631637,1333.56
+R&D Transactions 2025 Q1,R&D,Internal System,2025-02-13,792070,869.43
+R&D Feed 2024 Q1,R&D,Survey Tool,2025-10-15,4721741,666.0
+Cyber Survey Data 2025 Q4,Cyber,IoT Sensors,2025-01-27,2422810,1204.82
+R&D Logs 2024 Q2,R&D,IoT Sensors,2025-09-04,1891102,1696.08
+R&D Feed 2025 Q1,R&D,API,2025-10-21,1907159,1616.37
+IT Sensor Data 2025 Q1,IT,External Feed,2025-05-20,2601951,1843.86
+R&D Logs 2024 Q2,R&D,Survey Tool,2025-07-25,593724,292.33
+IT Logs 2024 Q4,IT,Public Dataset,2025-08-21,2869642,323.24
+Marketing Records 2025 Q1,Marketing,Internal System,2025-03-21,1330449,1511.33
+IT Records 2024 Q3,IT,Public Dataset,2025-08-06,4084025,1218.08
+Operations Analytics 2024 Q1,Operations,API,2025-08-09,940210,573.66
+Sales Sensor Data 2025 Q1,Sales,External Feed,2025-07-22,469544,25.3
+Marketing Transactions 2024 Q3,Marketing,API,2025-06-17,1016501,25.38
+Operations Transactions 2024 Q4,Operations,Survey Tool,2025-04-28,4206504,1121.86
+R&D Logs 2025 Q1,R&D,Public Dataset,2025-01-10,3866698,1843.11
+R&D Sensor Data 2025 Q4,R&D,IoT Sensors,2025-11-24,3513870,586.14
+Operations Logs 2025 Q2,Operations,Survey Tool,2025-08-24,3045440,185.38
+Cyber Transactions 2025 Q4,Cyber,Survey Tool,2025-02-10,3329931,1742.34
+R&D Transactions 2025 Q2,R&D,Internal System,2025-09-19,966524,1065.9
+HR Feed 2025 Q3,HR,IoT Sensors,2025-11-27,1248912,480.18
+Finance Analytics 2024 Q2,Finance,Survey Tool,2025-03-20,642109,362.52
+Sales Survey Data 2025 Q3,Sales,IoT Sensors,2025-06-11,1276322,885.13
+Sales Survey Data 2025 Q3,Sales,Survey Tool,2025-01-29,2962305,1019.6
+Marketing Survey Data 2025 Q1,Marketing,Internal System,2025-07-08,2418176,162.69
+Cyber Sensor Data 2025 Q4,Cyber,Survey Tool,2025-10-11,354123,904.97
+HR Analytics 2025 Q2,HR,Internal System,2025-08-19,878236,1623.82
+R&D Records 2024 Q2,R&D,Internal System,2025-05-07,3682182,1982.06
+Finance Analytics 2025 Q3,Finance,Public Dataset,2025-07-29,2848429,1361.01
+IT Feed 2025 Q1,IT,API,2025-02-18,4690534,1359.97
+Marketing Analytics 2024 Q3,Marketing,Internal System,2025-10-26,1196387,1834.33
+Marketing Records 2025 Q2,Marketing,Survey Tool,2025-02-13,2606961,1122.25
+R&D Feed 2024 Q1,R&D,IoT Sensors,2025-08-05,4275510,730.04
+R&D Analytics 2024 Q2,R&D,API,2025-09-06,1620656,460.82
+Finance Transactions 2024 Q3,Finance,Internal System,2025-09-17,4537925,1671.89
+IT Records 2025 Q2,IT,Survey Tool,2025-07-12,1303965,332.87
+Finance Records 2025 Q1,Finance,Public Dataset,2025-07-06,2002547,1939.48
+Marketing Feed 2025 Q2,Marketing,Survey Tool,2025-05-03,2606004,1931.54
+Sales Feed 2024 Q3,Sales,IoT Sensors,2025-10-20,3705998,928.74
+Marketing Feed 2025 Q4,Marketing,External Feed,2025-04-13,1170971,1747.27
+IT Records 2025 Q3,IT,Survey Tool,2025-02-22,4337761,1703.82
+Marketing Logs 2024 Q3,Marketing,Public Dataset,2025-09-20,1246050,1663.78
+Cyber Transactions 2025 Q3,Cyber,Internal System,2025-08-01,456751,798.94
+R&D Transactions 2025 Q1,R&D,API,2025-04-25,246454,644.18
+Cyber Feed 2025 Q2,Cyber,External Feed,2025-01-20,2416518,1835.62
+Sales Records 2024 Q4,Sales,Public Dataset,2025-11-12,54050,1812.66
+IT Analytics 2024 Q2,IT,Survey Tool,2025-11-08,4437268,852.28
+Marketing Transactions 2025 Q1,Marketing,Internal System,2025-05-03,3531751,1281.51
+Sales Logs 2024 Q4,Sales,Survey Tool,2025-10-02,147869,1267.59
+HR Records 2024 Q3,HR,Public Dataset,2025-01-01,2969635,488.72
+Operations Transactions 2024 Q3,Operations,Internal System,2025-09-27,4574090,1019.58
+IT Survey Data 2025 Q1,IT,IoT Sensors,2025-07-18,3141487,514.76
+IT Analytics 2024 Q3,IT,External Feed,2025-11-18,879595,1545.29
+R&D Transactions 2024 Q3,R&D,Survey Tool,2025-06-23,1478754,1662.46
+Sales Records 2025 Q2,Sales,External Feed,2025-02-02,3849294,83.6
+HR Logs 2024 Q1,HR,API,2025-06-08,4333350,802.47
+Sales Analytics 2024 Q2,Sales,API,2025-07-02,411009,1732.94
+R&D Analytics 2024 Q3,R&D,Public Dataset,2025-07-24,3698778,1790.33
+Operations Analytics 2024 Q4,Operations,IoT Sensors,2025-09-12,3091529,1849.38
+Marketing Feed 2024 Q4,Marketing,Internal System,2025-08-09,1523778,1095.49
+R&D Logs 2024 Q3,R&D,IoT Sensors,2025-06-01,2581073,897.37
+Operations Transactions 2025 Q3,Operations,Public Dataset,2025-01-22,2967481,1233.55
+Operations Analytics 2024 Q1,Operations,IoT Sensors,2025-11-23,3417538,732.99
+Finance Logs 2024 Q4,Finance,Internal System,2025-03-06,573994,479.63
+R&D Analytics 2025 Q1,R&D,Survey Tool,2025-03-20,3784224,1898.16
+R&D Survey Data 2024 Q2,R&D,Survey Tool,2025-07-07,3348951,635.63
+Marketing Transactions 2024 Q1,Marketing,IoT Sensors,2025-04-06,4196284,1040.31
+Cyber Analytics 2025 Q4,Cyber,External Feed,2025-11-10,2405592,1391.02
+Sales Transactions 2024 Q2,Sales,Internal System,2025-08-20,1458346,1798.37
+Sales Logs 2025 Q3,Sales,IoT Sensors,2025-02-03,4623710,1088.92
+Marketing Feed 2024 Q2,Marketing,API,2025-09-18,1891075,251.51
+HR Feed 2024 Q2,HR,Public Dataset,2025-01-14,3037419,1112.5
+R&D Survey Data 2024 Q1,R&D,Internal System,2025-06-08,3350007,1999.19
+Sales Sensor Data 2025 Q4,Sales,Survey Tool,2025-02-07,1061317,1945.04
+Cyber Survey Data 2025 Q3,Cyber,External Feed,2025-10-10,4940706,372.11
+Finance Survey Data 2024 Q1,Finance,Survey Tool,2025-03-20,2561181,337.67
+R&D Records 2024 Q3,R&D,Survey Tool,2025-05-26,671524,508.7
+Marketing Transactions 2025 Q1,Marketing,Survey Tool,2025-11-25,1424620,1187.7
+Finance Transactions 2025 Q1,Finance,Internal System,2025-02-11,391361,1897.61
+Marketing Records 2024 Q4,Marketing,Survey Tool,2025-11-24,264056,1001.1
+Marketing Records 2025 Q4,Marketing,External Feed,2025-07-27,2505056,912.55
+IT Transactions 2025 Q4,IT,Public Dataset,2025-08-26,1721469,686.98
+Finance Analytics 2025 Q3,Finance,Public Dataset,2025-03-08,3118316,1034.81
+Cyber Analytics 2024 Q4,Cyber,Internal System,2025-05-17,3781484,503.36
+Cyber Logs 2025 Q4,Cyber,Survey Tool,2025-08-03,2092642,1925.74
+Finance Feed 2025 Q3,Finance,External Feed,2025-03-23,4189754,1991.98
+Sales Survey Data 2025 Q4,Sales,Internal System,2025-02-16,3308754,1015.83
+HR Transactions 2025 Q1,HR,Internal System,2025-05-25,4161473,1199.06
+Sales Analytics 2024 Q1,Sales,Public Dataset,2025-03-10,2228559,1457.74
+Operations Analytics 2024 Q4,Operations,Internal System,2025-10-19,4722861,397.36
+Marketing Logs 2025 Q4,Marketing,Survey Tool,2025-05-24,1006659,266.04
+Cyber Survey Data 2025 Q3,Cyber,Survey Tool,2025-07-07,1220202,406.13
+Operations Sensor Data 2024 Q1,Operations,Internal System,2025-03-12,2803747,1609.89
+Sales Transactions 2024 Q3,Sales,Survey Tool,2025-06-13,1373165,791.98
+Marketing Sensor Data 2025 Q4,Marketing,IoT Sensors,2025-10-16,2524825,955.04
+IT Analytics 2025 Q1,IT,Public Dataset,2025-10-26,2590988,1595.54
+IT Sensor Data 2025 Q3,IT,IoT Sensors,2025-10-24,4855548,462.81
+IT Sensor Data 2025 Q2,IT,Survey Tool,2025-11-19,3199267,304.07
+HR Logs 2024 Q2,HR,Internal System,2025-08-14,2641443,843.37
+Operations Records 2024 Q4,Operations,Survey Tool,2025-11-10,3966113,1746.91
+IT Records 2024 Q2,IT,Survey Tool,2025-06-16,4022866,1055.7
+R&D Transactions 2025 Q3,R&D,Survey Tool,2025-07-01,2227630,1224.05
+HR Transactions 2025 Q3,HR,External Feed,2025-06-02,2434342,1412.75
+Sales Analytics 2025 Q3,Sales,Survey Tool,2025-05-21,2424152,252.53
+Operations Survey Data 2025 Q2,Operations,API,2025-01-22,2422818,1911.07
+Cyber Analytics 2025 Q3,Cyber,IoT Sensors,2025-09-03,1805051,412.12
+Marketing Sensor Data 2025 Q2,Marketing,Internal System,2025-11-12,4932691,486.17
+IT Records 2024 Q2,IT,Internal System,2025-02-21,3477023,667.28
+Sales Logs 2024 Q1,Sales,Survey Tool,2025-03-22,3423387,1309.26
+Sales Survey Data 2024 Q3,Sales,API,2025-05-27,506291,1816.79
+Cyber Records 2024 Q1,Cyber,External Feed,2025-08-02,1484622,1868.51
+IT Feed 2025 Q4,IT,External Feed,2025-05-29,324289,28.44
+Cyber Analytics 2025 Q4,Cyber,IoT Sensors,2025-10-06,4408302,992.89
+Finance Feed 2025 Q3,Finance,External Feed,2025-02-27,2783979,333.36
+Sales Records 2025 Q2,Sales,Internal System,2025-06-22,2484842,1139.88
+HR Transactions 2025 Q4,HR,Survey Tool,2025-06-17,737609,807.66
+Cyber Transactions 2024 Q4,Cyber,API,2025-05-08,67295,528.96
+HR Survey Data 2025 Q3,HR,API,2025-10-26,4815643,32.76
+R&D Records 2024 Q1,R&D,IoT Sensors,2025-03-02,3914016,620.54
+Operations Records 2025 Q1,Operations,IoT Sensors,2025-06-01,3093181,1233.1
+HR Transactions 2025 Q2,HR,Public Dataset,2025-11-07,3144192,837.53
+Sales Feed 2024 Q2,Sales,IoT Sensors,2025-11-02,696777,1055.76
+R&D Logs 2024 Q1,R&D,Survey Tool,2025-09-16,1705813,1149.68
+Finance Transactions 2025 Q4,Finance,Internal System,2025-04-16,4901797,982.77
+Sales Feed 2024 Q4,Sales,External Feed,2025-09-20,3494833,919.03
+IT Sensor Data 2025 Q3,IT,IoT Sensors,2025-01-12,3331458,516.37
+IT Records 2024 Q1,IT,Internal System,2025-08-05,2900117,1403.77
+IT Logs 2025 Q1,IT,API,2025-07-29,1519792,1540.25
+Operations Analytics 2025 Q4,Operations,Public Dataset,2025-07-12,683185,1368.63
+Finance Records 2025 Q1,Finance,External Feed,2025-10-03,3307214,1062.4
+HR Feed 2024 Q1,HR,API,2025-08-26,4577138,854.01
+Operations Feed 2024 Q2,Operations,Public Dataset,2025-06-27,1311252,558.54
+Cyber Logs 2025 Q1,Cyber,External Feed,2025-04-16,574477,210.78
+IT Survey Data 2024 Q2,IT,IoT Sensors,2025-01-23,3384446,883.54
+HR Feed 2024 Q2,HR,Survey Tool,2025-05-29,1974289,1633.41
+R&D Sensor Data 2025 Q2,R&D,API,2025-03-15,4382570,449.88
+Marketing Analytics 2024 Q2,Marketing,IoT Sensors,2025-08-07,4672813,996.29
+R&D Records 2025 Q3,R&D,IoT Sensors,2025-08-02,3434726,306.94
+Operations Transactions 2025 Q2,Operations,External Feed,2025-06-03,1220910,1613.49
+IT Sensor Data 2025 Q4,IT,Survey Tool,2025-09-29,1134851,782.95
+Marketing Transactions 2025 Q1,Marketing,Public Dataset,2025-07-09,785644,1075.91
+HR Logs 2025 Q4,HR,IoT Sensors,2025-11-06,341748,1748.5
+HR Feed 2024 Q4,HR,External Feed,2025-06-20,2553325,1914.47
+IT Transactions 2024 Q1,IT,IoT Sensors,2025-09-03,2045019,1394.3
+HR Survey Data 2024 Q3,HR,API,2025-07-14,3921192,1071.96
+R&D Analytics 2025 Q3,R&D,Survey Tool,2025-09-12,3919125,206.23
+Sales Feed 2025 Q2,Sales,API,2025-06-10,3482297,100.97
+HR Records 2024 Q1,HR,API,2025-10-11,4909214,1162.49
+Operations Analytics 2024 Q2,Operations,API,2025-04-28,3196326,1143.88
+HR Survey Data 2025 Q3,HR,Public Dataset,2025-11-25,4125414,927.05
+R&D Transactions 2024 Q4,R&D,External Feed,2025-10-05,502680,1052.65
+Cyber Feed 2024 Q1,Cyber,Public Dataset,2025-03-12,1951404,145.26
+Finance Logs 2024 Q4,Finance,API,2025-01-31,4063410,1321.98
+IT Logs 2025 Q1,IT,Internal System,2025-09-29,2314692,1076.12
+Marketing Logs 2025 Q2,Marketing,Internal System,2025-02-19,4408863,306.31
+HR Sensor Data 2025 Q3,HR,API,2025-07-23,672861,752.37
+Operations Survey Data 2024 Q2,Operations,API,2025-02-11,275788,196.07
+Operations Survey Data 2025 Q1,Operations,IoT Sensors,2025-01-05,1447669,174.55
+Operations Records 2025 Q1,Operations,Survey Tool,2025-01-22,1937421,430.72
+Sales Analytics 2024 Q1,Sales,IoT Sensors,2025-05-24,4565271,1131.38
+IT Transactions 2025 Q1,IT,External Feed,2025-10-28,1219566,1506.99
+Operations Logs 2025 Q2,Operations,Survey Tool,2025-05-04,4763789,1670.95
+Operations Records 2025 Q4,Operations,IoT Sensors,2025-03-13,667899,1006.58
+R&D Logs 2024 Q4,R&D,External Feed,2025-02-08,2867099,1214.29
+Operations Feed 2025 Q1,Operations,IoT Sensors,2025-05-20,3789488,986.3
+R&D Sensor Data 2025 Q4,R&D,External Feed,2025-10-27,3198281,180.53
+Marketing Feed 2024 Q1,Marketing,Internal System,2025-05-18,1303699,766.2
+Finance Records 2025 Q3,Finance,API,2025-02-24,777729,20.34
+Marketing Survey Data 2025 Q3,Marketing,Internal System,2025-03-09,742302,382.91
+Sales Sensor Data 2025 Q1,Sales,Internal System,2025-02-15,2978848,1112.9
+R&D Feed 2025 Q1,R&D,API,2025-07-31,3263098,1560.55
+HR Sensor Data 2024 Q4,HR,External Feed,2025-03-13,2265855,609.25
+Sales Transactions 2024 Q2,Sales,Public Dataset,2025-05-22,3542462,606.51
+Cyber Analytics 2025 Q2,Cyber,IoT Sensors,2025-11-17,4169092,1191.67
+HR Survey Data 2024 Q2,HR,API,2025-01-04,3329304,671.11
+Operations Feed 2025 Q4,Operations,API,2025-08-09,4996129,280.89
+R&D Sensor Data 2024 Q4,R&D,API,2025-04-01,3350675,1937.76
+Marketing Records 2025 Q2,Marketing,API,2025-07-12,2361328,1634.82
+Operations Analytics 2024 Q2,Operations,Survey Tool,2025-10-07,1519338,1366.61
+IT Records 2025 Q2,IT,Public Dataset,2025-05-30,590144,1639.74
+Operations Records 2025 Q2,Operations,IoT Sensors,2025-06-05,2040220,512.84
+Finance Records 2025 Q4,Finance,Internal System,2025-08-18,4030112,1168.67
+Operations Sensor Data 2024 Q3,Operations,IoT Sensors,2025-10-02,4991322,1279.98
+Cyber Logs 2024 Q3,Cyber,External Feed,2025-11-28,381587,1130.81
+Operations Feed 2025 Q4,Operations,Internal System,2025-01-06,837171,524.89
+HR Survey Data 2025 Q4,HR,Public Dataset,2025-10-29,4208211,309.98
+IT Survey Data 2024 Q3,IT,Public Dataset,2025-02-13,983660,1664.32
+Finance Analytics 2025 Q3,Finance,Public Dataset,2025-04-16,4381428,971.02
+Sales Logs 2025 Q4,Sales,API,2025-02-04,2528797,98.92
+Cyber Logs 2025 Q1,Cyber,IoT Sensors,2025-03-26,2056090,1036.83
+Finance Analytics 2025 Q4,Finance,External Feed,2025-07-27,1557293,380.91
+Operations Survey Data 2024 Q2,Operations,Public Dataset,2025-10-31,3613350,783.78
+HR Transactions 2025 Q1,HR,Survey Tool,2025-02-22,4513751,382.05
+R&D Transactions 2025 Q1,R&D,API,2025-09-08,4436794,1932.17
+R&D Sensor Data 2025 Q4,R&D,Survey Tool,2025-02-28,2928603,710.45
+Sales Sensor Data 2024 Q3,Sales,Survey Tool,2025-10-30,720951,1347.5
+R&D Logs 2024 Q3,R&D,Internal System,2025-04-04,3141518,1389.94
+Operations Survey Data 2024 Q4,Operations,Public Dataset,2025-04-06,4092485,1274.65
+Finance Sensor Data 2024 Q4,Finance,API,2025-03-13,1579496,636.01
+Sales Sensor Data 2024 Q3,Sales,Internal System,2025-09-06,1155336,398.31
+Operations Sensor Data 2025 Q4,Operations,IoT Sensors,2025-09-09,3496560,1423.18
+Sales Survey Data 2024 Q1,Sales,Survey Tool,2025-01-16,1859935,591.26
+Marketing Transactions 2025 Q2,Marketing,Public Dataset,2025-10-17,4164989,1103.96
+Cyber Sensor Data 2024 Q3,Cyber,Survey Tool,2025-07-07,4556989,1647.0
+IT Feed 2025 Q2,IT,Public Dataset,2025-02-22,2086445,602.44
+IT Survey Data 2025 Q3,IT,Internal System,2025-08-13,994705,1553.51
+HR Transactions 2025 Q4,HR,External Feed,2025-11-12,1177987,1571.85
+HR Feed 2024 Q3,HR,Survey Tool,2025-05-24,4529518,345.07
+Marketing Analytics 2025 Q1,Marketing,External Feed,2025-07-30,507326,1985.05
+Finance Records 2024 Q2,Finance,External Feed,2025-06-14,2086639,1525.33
+Operations Survey Data 2024 Q3,Operations,IoT Sensors,2025-08-01,3157173,909.46
+Cyber Survey Data 2025 Q3,Cyber,Public Dataset,2025-09-07,2755501,1168.09
+Cyber Records 2025 Q3,Cyber,Internal System,2025-10-01,3346282,443.48
+Operations Feed 2024 Q4,Operations,API,2025-06-15,2388951,682.13
+Finance Sensor Data 2025 Q3,Finance,IoT Sensors,2025-01-25,395397,208.15
+Sales Logs 2024 Q2,Sales,Public Dataset,2025-08-22,15670,1983.76
+Operations Transactions 2024 Q3,Operations,External Feed,2025-05-21,792992,1312.63
+Marketing Logs 2025 Q2,Marketing,Internal System,2025-07-22,2572797,1454.72
+HR Survey Data 2024 Q1,HR,Internal System,2025-04-20,4009744,165.1
+HR Sensor Data 2025 Q1,HR,Internal System,2025-06-25,1021613,1976.43
+Operations Records 2024 Q4,Operations,Internal System,2025-04-28,3223423,187.77
+Cyber Logs 2025 Q3,Cyber,API,2025-03-12,3220496,1549.19
+Finance Records 2024 Q1,Finance,Survey Tool,2025-10-16,81091,1224.54
+Finance Survey Data 2025 Q2,Finance,IoT Sensors,2025-03-19,3463672,1235.99
+Sales Feed 2024 Q1,Sales,Internal System,2025-03-13,1043117,1183.25
+Operations Analytics 2025 Q3,Operations,External Feed,2025-05-07,2333373,1292.79
+HR Sensor Data 2025 Q1,HR,IoT Sensors,2025-06-04,1733403,1040.32
+HR Records 2025 Q3,HR,IoT Sensors,2025-01-28,2017738,994.83
+Cyber Transactions 2025 Q1,Cyber,Survey Tool,2025-01-07,3039111,1868.51
+Finance Survey Data 2025 Q3,Finance,Survey Tool,2025-03-30,3961157,1909.36
+Cyber Logs 2024 Q1,Cyber,API,2025-04-21,344091,1845.93
+Operations Sensor Data 2025 Q4,Operations,Public Dataset,2025-07-25,701454,1284.67
+Finance Analytics 2024 Q3,Finance,Internal System,2025-09-19,1714544,1948.88
+Finance Sensor Data 2025 Q4,Finance,Survey Tool,2025-11-21,564613,627.24
+Operations Records 2024 Q1,Operations,External Feed,2025-02-14,3654712,240.81
+IT Analytics 2024 Q1,IT,Internal System,2025-03-12,105215,336.03
+R&D Sensor Data 2025 Q2,R&D,API,2025-03-06,2264559,1468.54
+Cyber Feed 2024 Q3,Cyber,Public Dataset,2025-05-20,4404407,137.11
+Cyber Survey Data 2025 Q3,Cyber,Internal System,2025-09-13,4765385,342.09
+Finance Analytics 2024 Q1,Finance,External Feed,2025-09-18,31546,97.64
+IT Transactions 2024 Q4,IT,API,2025-07-16,1269001,366.13
+IT Sensor Data 2025 Q2,IT,API,2025-05-08,3501813,1832.55
+R&D Analytics 2024 Q3,R&D,Internal System,2025-09-15,451846,366.9
+IT Survey Data 2024 Q4,IT,API,2025-06-09,2755599,181.91
+Sales Logs 2025 Q2,Sales,API,2025-10-16,2559376,1481.76
+HR Survey Data 2025 Q4,HR,External Feed,2025-10-07,2066273,309.63
+Operations Logs 2024 Q3,Operations,IoT Sensors,2025-01-05,2820329,12.91
+Operations Feed 2025 Q1,Operations,External Feed,2025-09-29,2007894,845.43
+IT Transactions 2025 Q1,IT,Internal System,2025-04-29,4370056,831.98
+R&D Survey Data 2024 Q1,R&D,Survey Tool,2025-03-10,3318058,158.91
+IT Survey Data 2024 Q2,IT,API,2025-05-14,2652486,1852.82
+Operations Records 2025 Q3,Operations,Public Dataset,2025-05-20,1969673,158.63
+HR Transactions 2024 Q2,HR,Internal System,2025-03-26,3781239,937.45
+Operations Logs 2025 Q2,Operations,Public Dataset,2025-06-07,3896832,537.37
+Cyber Logs 2024 Q3,Cyber,IoT Sensors,2025-11-05,348310,437.89
+R&D Transactions 2024 Q2,R&D,API,2025-07-22,4317211,107.41
+Marketing Analytics 2024 Q1,Marketing,Public Dataset,2025-08-20,4673678,1498.68
+HR Logs 2025 Q1,HR,External Feed,2025-03-04,110301,132.72
+HR Transactions 2024 Q4,HR,API,2025-11-19,714973,1168.82
+Marketing Feed 2024 Q1,Marketing,Internal System,2025-04-12,3729771,1620.5
+Cyber Feed 2025 Q1,Cyber,Internal System,2025-08-25,434779,344.3
+Operations Feed 2025 Q4,Operations,Internal System,2025-07-15,3589117,353.89
+HR Transactions 2025 Q3,HR,Public Dataset,2025-03-18,300660,1232.07
+HR Records 2025 Q4,HR,Public Dataset,2025-10-09,4028402,131.35
+Marketing Survey Data 2024 Q4,Marketing,External Feed,2025-11-26,4420848,505.8
+IT Survey Data 2025 Q4,IT,Survey Tool,2025-09-06,2895967,1826.23
+R&D Survey Data 2025 Q2,R&D,Internal System,2025-06-13,1847274,68.31
+Marketing Logs 2025 Q3,Marketing,Survey Tool,2025-04-30,1349029,209.27
+HR Analytics 2024 Q2,HR,Survey Tool,2025-07-18,2986316,1871.06
+Finance Transactions 2024 Q3,Finance,IoT Sensors,2025-07-03,4972385,66.13
+R&D Sensor Data 2024 Q2,R&D,Public Dataset,2025-10-05,2602525,359.36
+IT Logs 2024 Q2,IT,Survey Tool,2025-04-23,177168,1057.63
+IT Analytics 2024 Q2,IT,API,2025-04-01,2724459,128.52
+Finance Sensor Data 2024 Q1,Finance,Survey Tool,2025-07-06,618439,753.45
+Operations Sensor Data 2024 Q3,Operations,API,2025-06-15,1154639,1951.96
+Operations Feed 2025 Q3,Operations,External Feed,2025-10-15,3003269,454.24
+Finance Survey Data 2025 Q3,Finance,External Feed,2025-04-01,25081,1898.09
+Operations Feed 2024 Q2,Operations,Survey Tool,2025-06-12,1863003,1282.9
+Cyber Survey Data 2024 Q3,Cyber,IoT Sensors,2025-02-09,2006454,700.15
+R&D Transactions 2024 Q3,R&D,Public Dataset,2025-01-06,2234763,427.27
+Cyber Analytics 2025 Q1,Cyber,IoT Sensors,2025-01-01,413890,778.01
+Operations Transactions 2025 Q4,Operations,Public Dataset,2025-06-29,4590381,756.94
+Sales Feed 2024 Q2,Sales,Public Dataset,2025-02-07,290286,596.87
+R&D Analytics 2024 Q1,R&D,API,2025-03-29,3159569,330.2
+Cyber Sensor Data 2024 Q3,Cyber,Survey Tool,2025-11-11,4059489,1411.96
+Operations Records 2024 Q4,Operations,External Feed,2025-01-28,859412,668.88
+HR Survey Data 2025 Q3,HR,API,2025-05-02,814601,108.77
+Sales Transactions 2024 Q3,Sales,Internal System,2025-08-07,745079,596.15
+Sales Transactions 2024 Q1,Sales,External Feed,2025-03-29,2457891,1954.34
+Sales Feed 2024 Q3,Sales,Public Dataset,2025-08-30,4112841,1790.81
+Marketing Logs 2025 Q2,Marketing,API,2025-07-15,3108765,381.3
+IT Analytics 2025 Q4,IT,API,2025-04-26,2262861,1132.85
+Finance Feed 2024 Q1,Finance,IoT Sensors,2025-06-26,4552003,833.83
+HR Sensor Data 2024 Q4,HR,Survey Tool,2025-08-03,4502220,1377.27
+Sales Sensor Data 2024 Q4,Sales,API,2025-02-10,3321859,1806.53
+IT Sensor Data 2024 Q1,IT,Public Dataset,2025-03-30,1412279,1944.61
+HR Transactions 2024 Q4,HR,Internal System,2025-08-11,1703821,1994.57
+Finance Feed 2025 Q3,Finance,IoT Sensors,2025-02-04,740039,782.32
+Operations Sensor Data 2025 Q3,Operations,Survey Tool,2025-08-23,113715,1575.24
+Operations Logs 2025 Q2,Operations,External Feed,2025-10-18,4941948,1169.53
+Cyber Logs 2024 Q3,Cyber,Survey Tool,2025-06-26,3456795,535.63
+Sales Sensor Data 2025 Q1,Sales,External Feed,2025-05-22,3390390,296.27
+Operations Logs 2025 Q3,Operations,IoT Sensors,2025-05-02,423482,1494.04
+Marketing Analytics 2024 Q3,Marketing,API,2025-06-09,2361718,1687.26
+Cyber Feed 2024 Q2,Cyber,API,2025-08-15,2701638,546.15
+Operations Sensor Data 2024 Q2,Operations,Public Dataset,2025-04-19,3425592,1484.48
+R&D Feed 2024 Q2,R&D,Internal System,2025-06-09,4261306,812.74
+IT Transactions 2024 Q2,IT,Internal System,2025-05-08,287420,918.33
+R&D Records 2024 Q3,R&D,API,2025-08-26,4247307,799.92
+Cyber Records 2024 Q2,Cyber,API,2025-09-08,4993198,897.75
+Sales Sensor Data 2025 Q3,Sales,External Feed,2025-05-13,768262,577.29
+Operations Logs 2024 Q2,Operations,External Feed,2025-11-28,1898376,1358.61
+Marketing Records 2025 Q1,Marketing,IoT Sensors,2025-01-05,3987015,1823.92
+Finance Sensor Data 2024 Q2,Finance,API,2025-11-08,2572381,1428.35
+Marketing Survey Data 2025 Q3,Marketing,Public Dataset,2025-05-10,1840470,938.73
+Operations Sensor Data 2024 Q1,Operations,Survey Tool,2025-07-11,4719843,1298.21
+Marketing Analytics 2024 Q4,Marketing,Internal System,2025-06-22,2329309,1284.78
+Marketing Analytics 2025 Q2,Marketing,External Feed,2025-09-22,2025799,1800.38
+Operations Records 2025 Q2,Operations,IoT Sensors,2025-01-14,4182265,1994.96
+Marketing Survey Data 2025 Q4,Marketing,IoT Sensors,2025-01-19,4900757,1419.06
+HR Analytics 2024 Q4,HR,IoT Sensors,2025-07-03,4265665,607.39
+Finance Feed 2024 Q3,Finance,Internal System,2025-08-30,1083273,1484.43
+Finance Records 2025 Q1,Finance,External Feed,2025-07-01,1883410,1490.98
+Marketing Survey Data 2025 Q3,Marketing,API,2025-10-27,2476679,932.88
+Cyber Survey Data 2024 Q1,Cyber,Public Dataset,2025-04-10,4208308,248.43
+Operations Sensor Data 2025 Q4,Operations,Internal System,2025-03-19,1162303,1984.77
+R&D Survey Data 2025 Q2,R&D,API,2025-04-03,687895,980.29
+Finance Analytics 2024 Q1,Finance,Public Dataset,2025-05-21,1766426,1524.77
+Finance Sensor Data 2024 Q4,Finance,Internal System,2025-03-08,3648235,1270.64
+Operations Survey Data 2025 Q4,Operations,Internal System,2025-01-20,4487693,406.83
+R&D Logs 2025 Q2,R&D,Internal System,2025-01-03,2097279,460.27
+R&D Analytics 2024 Q1,R&D,Public Dataset,2025-09-15,4948127,619.17
+Cyber Feed 2024 Q3,Cyber,API,2025-08-22,4374495,1196.78
+R&D Survey Data 2024 Q3,R&D,Public Dataset,2025-07-03,1590632,338.12
+Operations Logs 2024 Q2,Operations,IoT Sensors,2025-03-09,1781592,1470.81
+Finance Logs 2025 Q1,Finance,Public Dataset,2025-11-24,2155715,1544.79
+IT Sensor Data 2024 Q1,IT,IoT Sensors,2025-01-11,414624,1382.6
+Operations Survey Data 2025 Q1,Operations,Survey Tool,2025-05-10,3989524,1406.72
+HR Records 2024 Q3,HR,Public Dataset,2025-02-21,4374670,547.25
+Finance Survey Data 2024 Q1,Finance,API,2025-02-28,901404,1000.5
+HR Feed 2025 Q2,HR,API,2025-07-29,2487585,329.14
+Sales Transactions 2025 Q3,Sales,External Feed,2025-01-02,116949,1346.55

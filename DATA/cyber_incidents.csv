@@ -59,3 +59,343 @@ id,date,incident_type,severity,status,description,reported_by,created_at
 58,2025-11-11,Phishing,High,Open,Phishing emails detected,diana,2025-11-11 09:50:00
 59,2025-11-12,Ransomware,Critical,Investigating,Ransomware stopped,emma,2025-11-12 12:30:00
 60,2025-11-13,Phishing,High,Open,Phishing attempts blocked,frank,2025-11-13 09:55:00
+61,2025-11-14,Phishing,High,Open,Spear-phishing targeting HR,alice,2025-11-14 10:10:00
+62,2025-11-15,Malware,Medium,Resolved,Ransomware attempt blocked,bob,2025-11-15 11:35:00
+63,2025-11-16,Phishing,Critical,Open,Targeted phishing campaign on executives,charlie,2025-11-16 09:45:00
+64,2025-11-17,DDoS,Medium,Closed,Temporary website downtime,diana,2025-11-17 13:20:00
+65,2025-11-18,Ransomware,High,Investigating,Encrypted HR files detected,emma,2025-11-18 12:00:00
+66,2025-11-19,Phishing,High,Open,Credential phishing detected,frank,2025-11-19 09:50:00
+67,2025-11-20,Malware,Medium,Resolved,Trojan removed from workstation,alice,2025-11-20 11:15:00
+68,2025-11-21,Phishing,High,Open,Spear-phishing targeting finance,charlie,2025-11-21 10:05:00
+69,2025-11-22,DDoS,Medium,Closed,Mitigated API attack,bob,2025-11-22 13:40:00
+70,2025-11-23,Phishing,Critical,Open,Targeted phishing emails to IT team,diana,2025-11-23 09:35:00
+71,2025-11-24,Phishing,High,Open,Multiple phishing attempts in marketing emails,emma,2025-11-24 10:00:00
+72,2025-11-25,Malware,Medium,Resolved,Adware detected and removed from laptop,bob,2025-11-25 11:20:00
+73,2025-11-26,Ransomware,Critical,Investigating,Ransomware signature detected on server,charlie,2025-11-26 12:40:00
+74,2025-11-27,DDoS,Medium,Closed,Short outage due to botnet traffic,frank,2025-11-27 13:15:00
+75,2025-11-28,Phishing,High,Open,High-volume phishing emails received,alice,2025-11-28 09:45:00
+76,2025-11-29,Phishing,High,Open,Credential harvesting campaign detected,diana,2025-11-29 10:30:00
+77,2025-11-30,Malware,Medium,Resolved,Spyware removed from workstation,emma,2025-11-30 11:10:00
+78,2025-12-01,Ransomware,Critical,Investigating,Unauthorized file encryption attempt,bob,2025-12-01 12:55:00
+79,2025-12-02,Phishing,High,Open,Phishing emails impersonating CEO,charlie,2025-12-02 09:40:00
+80,2025-12-03,DDoS,Medium,Closed,API latency due to external traffic spike,frank,2025-12-03 13:05:00
+81,2025-12-04,Phishing,High,Open,Phishing emails with malicious PDFs,alice,2025-12-04 09:55:00
+82,2025-12-05,Malware,Medium,Resolved,Trojan attempt flagged on endpoint,diana,2025-12-05 11:20:00
+83,2025-12-06,Ransomware,Critical,Investigating,Ransomware detected on finance machine,emma,2025-12-06 12:00:00
+84,2025-12-07,Phishing,High,Open,Multiple credential phishing attempts,bob,2025-12-07 09:50:00
+85,2025-12-08,DDoS,Medium,Closed,Service slowdown due to network flood,charlie,2025-12-08 13:10:00
+86,2025-12-09,Phishing,Critical,Open,Spear-phishing targeting senior leadership,frank,2025-12-09 10:15:00
+87,2025-12-10,Malware,Medium,Resolved,Keylogger removed from laptop,alice,2025-12-10 11:00:00
+88,2025-12-11,Phishing,High,Open,Malicious email attachments detected,diana,2025-12-11 09:45:00
+89,2025-12-12,Ransomware,Critical,Investigating,Ransomware blocked on HR workstation,emma,2025-12-12 12:30:00
+90,2025-12-13,Phishing,High,Open,Phishing emails detected organization-wide,bob,2025-12-13 10:00:00
+91,2025-12-14,DDoS,Medium,Closed,Traffic spike mitigated successfully,charlie,2025-12-14 13:40:00
+92,2025-12-15,Phishing,High,Open,Fake login portal reported,frank,2025-12-15 09:55:00
+93,2025-12-16,Malware,Medium,Resolved,Malicious script quarantined,alice,2025-12-16 11:15:00
+94,2025-12-17,Phishing,Critical,Open,Executive-targeted phishing attack,diana,2025-12-17 10:00:00
+95,2025-12-18,Ransomware,High,Investigating,Suspicious file encryption attempt,emma,2025-12-18 12:20:00
+96,2025-12-19,Phishing,High,Open,Multiple phishing campaigns active,bob,2025-12-19 10:05:00
+97,2025-12-20,DDoS,Medium,Closed,Short outage due to suspected botnet,charlie,2025-12-20 13:30:00
+98,2025-12-21,Phishing,High,Open,Phishing attacks via spoofed emails,frank,2025-12-21 09:40:00
+99,2025-12-22,Malware,Medium,Resolved,Trojan removed safely,alice,2025-12-22 11:00:00
+100,2025-12-23,Phishing,Critical,Open,Spear-phishing targeting HR,diana,2025-12-23 09:50:00
+101,2025-12-24,Phishing,High,Open,Phishing emails with fake invoice attachments,emma,2025-12-24 10:10:00
+102,2025-12-25,Malware,Medium,Resolved,Spyware detected on workstation,bob,2025-12-25 11:25:00
+103,2025-12-26,Ransomware,Critical,Investigating,Ransomware attack prevented,charlie,2025-12-26 12:45:00
+104,2025-12-27,DDoS,Medium,Closed,Traffic surge mitigated,frank,2025-12-27 13:30:00
+105,2025-12-28,Phishing,High,Open,Multiple credential phishing emails,alice,2025-12-28 09:55:00
+106,2025-12-29,Phishing,High,Open,Targeted spear-phishing attempts,diana,2025-12-29 10:20:00
+107,2025-12-30,Malware,Medium,Resolved,Trojan detected and removed,emma,2025-12-30 11:40:00
+108,2025-12-31,Ransomware,Critical,Investigating,Ransomware signatures found on server,bob,2025-12-31 12:10:00
+109,2026-01-01,Phishing,High,Open,Phishing emails impersonating IT support,charlie,2026-01-01 09:45:00
+110,2026-01-02,DDoS,Medium,Closed,Website slowdown due to attack,frank,2026-01-02 13:20:00
+111,2026-01-03,Phishing,Critical,Open,Spear-phishing targeting finance staff,alice,2026-01-03 10:05:00
+112,2026-01-04,Malware,Medium,Resolved,Keylogger uninstalled successfully,diana,2026-01-04 11:30:00
+113,2026-01-05,Phishing,High,Open,Phishing campaign using compromised accounts,emma,2026-01-05 10:20:00
+114,2026-01-06,Ransomware,Critical,Investigating,Unauthorized encryption attempt detected,bob,2026-01-06 12:15:00
+115,2026-01-07,Phishing,High,Open,Fake payroll notifications reported,charlie,2026-01-07 09:50:00
+116,2026-01-08,DDoS,Medium,Closed,API servers slowed by malicious traffic,frank,2026-01-08 13:25:00
+117,2026-01-09,Phishing,High,Open,Employees targeted by fake HR forms,alice,2026-01-09 10:00:00
+118,2026-01-10,Malware,Medium,Resolved,Adware cleaned from device,diana,2026-01-10 11:35:00
+119,2026-01-11,Phishing,Critical,Open,Spear-phishing targeted at executives,emma,2026-01-11 09:55:00
+120,2026-01-12,Ransomware,High,Investigating,Detected potential ransomware activity,bob,2026-01-12 12:40:00
+121,2026-01-13,Phishing,High,Open,Fraudulent login pages reported,charlie,2026-01-13 10:25:00
+122,2026-01-14,DDoS,Medium,Closed,Mitigated external bot attack,frank,2026-01-14 13:00:00
+123,2026-01-15,Phishing,High,Open,Fake Microsoft alerts detected,alice,2026-01-15 09:40:00
+124,2026-01-16,Malware,Medium,Resolved,Rogue executable removed,diana,2026-01-16 11:10:00
+125,2026-01-17,Phishing,High,Open,Credential harvesting emails detected,emma,2026-01-17 09:50:00
+126,2026-01-18,Ransomware,Critical,Investigating,Potential encryption spread on network,bob,2026-01-18 12:50:00
+127,2026-01-19,Phishing,High,Open,Employees targeted by spoofed vendor emails,charlie,2026-01-19 10:00:00
+128,2026-01-20,DDoS,Medium,Closed,Temporary outage from external threat,frank,2026-01-20 13:15:00
+129,2026-01-21,Phishing,Critical,Open,High-risk phishing campaign detected,alice,2026-01-21 09:45:00
+130,2026-01-22,Malware,Medium,Resolved,Malicious script removed from device,diana,2026-01-22 11:20:00
+131,2026-01-23,Phishing,High,Open,New wave of phishing attacks detected,emma,2026-01-23 10:05:00
+132,2026-01-24,Ransomware,Critical,Investigating,Ransomware blocked on multiple machines,bob,2026-01-24 12:35:00
+133,2026-01-25,Phishing,High,Open,Fake billing notifications reported,charlie,2026-01-25 09:55:00
+134,2026-01-26,DDoS,Medium,Closed,Large-scale traffic spike mitigated,frank,2026-01-26 13:40:00
+135,2026-01-27,Malware,Medium,Resolved,Trojan downloader removed,alice,2026-01-27 11:10:00
+136,2026-01-28,Phishing,High,Open,Spoofed notifications sent to staff,diana,2026-01-28 10:20:00
+137,2026-01-29,Phishing,Critical,Open,Spear-phishing targeting HR executives,emma,2026-01-29 09:50:00
+138,2026-01-30,Ransomware,High,Investigating,Detected malicious encryption processes,bob,2026-01-30 12:00:00
+139,2026-01-31,Phishing,High,Open,Fake service deactivation warnings reported,charlie,2026-01-31 10:30:00
+140,2026-02-01,DDoS,Medium,Closed,Minor downtime due to attack,frank,2026-02-01 13:05:00
+141,2026-02-02,Phishing,High,Open,Phishing emails targeting new hires,alice,2026-02-02 09:55:00
+142,2026-02-03,Malware,Medium,Resolved,Unwanted software detected and removed,diana,2026-02-03 11:15:00
+143,2026-02-04,Phishing,Critical,Open,Spear-phishing targeting leadership team,emma,2026-02-04 10:00:00
+144,2026-02-05,Ransomware,High,Investigating,Ransomware indicators found in logs,bob,2026-02-05 12:25:00
+145,2026-02-06,Phishing,High,Open,Compromised accounts used in attacks,charlie,2026-02-06 09:50:00
+146,2026-02-07,DDoS,Medium,Closed,API slowdown from malicious traffic,frank,2026-02-07 13:00:00
+147,2026-02-08,Phishing,High,Open,Employees targeted with fake security alerts,alice,2026-02-08 09:45:00
+148,2026-02-09,Malware,Medium,Resolved,Malware detected and isolated,diana,2026-02-09 11:25:00
+149,2026-02-10,Phishing,Critical,Open,Ongoing spear-phishing on finance team,emma,2026-02-10 10:10:00
+150,2026-02-11,Ransomware,High,Investigating,Encrypted data fragments detected,bob,2026-02-11 12:30:00
+151,2026-02-12,Phishing,High,Open,Fake MFA verification emails detected,charlie,2026-02-12 09:40:00
+152,2026-02-13,DDoS,Medium,Closed,Short disruption due to botnet,frank,2026-02-13 13:20:00
+153,2026-02-14,Phishing,High,Open,Phishing attack disguised as HR update,alice,2026-02-14 10:05:00
+154,2026-02-15,Malware,Medium,Resolved,Rogue script detected and deleted,diana,2026-02-15 11:30:00
+155,2026-02-16,Phishing,Critical,Open,High severity spear-phishing attack,emma,2026-02-16 09:55:00
+156,2026-02-17,Ransomware,High,Investigating,Ransomware behavior noticed,bob,2026-02-17 12:15:00
+157,2026-02-18,Phishing,High,Open,Users targeted by fake security patches,charlie,2026-02-18 10:00:00
+158,2026-02-19,DDoS,Medium,Closed,Website slowdown due to bot traffic,frank,2026-02-19 13:30:00
+159,2026-02-20,Phishing,Critical,Open,Executive-targeted phishing links found,alice,2026-02-20 09:50:00
+160,2026-02-21,Malware,Medium,Resolved,Infected browser extension removed,diana,2026-02-21 11:10:00
+161,2026-02-22,Phishing,High,Open,Fake onboarding document attacks,emma,2026-02-22 10:00:00
+162,2026-02-23,Ransomware,High,Investigating,Unauthorized encryption attempt blocked,bob,2026-02-23 12:40:00
+163,2026-02-24,Phishing,High,Open,Mass phishing emails detected,charlie,2026-02-24 09:55:00
+164,2026-02-25,DDoS,Medium,Closed,API performance impacted briefly,frank,2026-02-25 13:10:00
+165,2026-02-26,Malware,Medium,Resolved,Spyware removed from employee PC,alice,2026-02-26 11:20:00
+166,2026-02-27,Phishing,Critical,Open,Large spear-phishing campaign identified,diana,2026-02-27 09:45:00
+167,2026-02-28,Ransomware,High,Investigating,Suspicious encrypted files detected,emma,2026-02-28 12:00:00
+168,2026-03-01,Phishing,High,Open,Multiple phishing attacks in finance dept,bob,2026-03-01 10:05:00
+169,2026-03-02,DDoS,Medium,Closed,Mitigated high-volume traffic attack,charlie,2026-03-02 13:25:00
+170,2026-03-03,Phishing,High,Open,Fake tax-related emails circulating,frank,2026-03-03 09:50:00
+171,2026-03-04,Malware,Medium,Resolved,Trojan variant detected and removed,alice,2026-03-04 11:00:00
+172,2026-03-05,Phishing,Critical,Open,Spear-phishing targeting executives,diana,2026-03-05 10:20:00
+173,2026-03-06,Ransomware,High,Investigating,Signs of lateral ransomware movement,bob,2026-03-06 12:35:00
+174,2026-03-07,Phishing,High,Open,Fake vendor payment alerts detected,charlie,2026-03-07 09:55:00
+175,2026-03-08,DDoS,Medium,Closed,Short downtime due to attack,frank,2026-03-08 13:40:00
+176,2026-03-09,Phishing,High,Open,Company-wide phishing attempts reported,emma,2026-03-09 10:10:00
+177,2026-03-10,Malware,Medium,Resolved,Rogue process identified and removed,alice,2026-03-10 11:15:00
+178,2026-03-11,Phishing,Critical,Open,HR-targeted spear-phishing detected,diana,2026-03-11 10:05:00
+179,2026-03-12,Ransomware,High,Investigating,Unusual file encryption activity logged,bob,2026-03-12 12:10:00
+180,2026-03-13,Phishing,High,Open,Fake internal communication emails,charlie,2026-03-13 09:45:00
+181,2026-03-14,DDoS,Medium,Closed,External traffic spike resolved,frank,2026-03-14 13:20:00
+182,2026-03-15,Malware,Medium,Resolved,Malicious package removed from device,emma,2026-03-15 11:30:00
+183,2026-03-16,Phishing,High,Open,New phishing templates detected,alice,2026-03-16 09:55:00
+184,2026-03-17,Ransomware,Critical,Investigating,Ransomware indicators in system logs,diana,2026-03-17 12:40:00
+185,2026-03-18,Phishing,High,Open,Multiple spoofed emails reported,bob,2026-03-18 10:10:00
+186,2026-03-19,DDoS,Medium,Closed,API temporarily overloaded,charlie,2026-03-19 13:05:00
+187,2026-03-20,Phishing,High,Open,Malicious link campaigns ongoing,frank,2026-03-20 09:50:00
+188,2026-03-21,Malware,Medium,Resolved,Infected file scanned and deleted,emma,2026-03-21 11:15:00
+189,2026-03-22,Phishing,Critical,Open,Executive-targeted attacks detected,alice,2026-03-22 10:00:00
+190,2026-03-23,Ransomware,High,Investigating,Encrypted partitions detected,diana,2026-03-23 12:50:00
+191,2026-03-24,Phishing,High,Open,Fake password reset emails received,bob,2026-03-24 09:40:00
+192,2026-03-25,DDoS,Medium,Closed,Short disruption from botnet traffic,charlie,2026-03-25 13:30:00
+193,2026-03-26,Phishing,High,Open,Spam phishing attempts blocked,frank,2026-03-26 10:05:00
+194,2026-03-27,Malware,Medium,Resolved,Malicious file execution prevented,emma,2026-03-27 11:20:00
+195,2026-03-28,Phishing,Critical,Open,Spear-phishing in HR systems detected,alice,2026-03-28 09:55:00
+196,2026-03-29,Ransomware,High,Investigating,Unauthorized encryption blocked,diana,2026-03-29 12:30:00
+197,2026-03-30,Phishing,High,Open,Multiple phishing campaigns ongoing,bob,2026-03-30 09:50:00
+198,2026-03-31,DDoS,Medium,Closed,Website performance degraded briefly,charlie,2026-03-31 13:00:00
+199,2026-04-01,Malware,Medium,Resolved,Infected email attachment removed,frank,2026-04-01 11:10:00
+200,2026-04-02,Phishing,High,Open,Fake employee survey emails detected,emma,2026-04-02 10:00:00
+201,2026-03-10,Phishing,High,Open,Multiple phishing emails targeting payroll staff,emma,2026-03-10 09:45:00
+202,2026-03-11,Malware,Medium,Resolved,Adware removed from employee workstation,bob,2026-03-11 10:20:00
+203,2026-03-12,Ransomware,Critical,Investigating,Unauthorized encryption attempt detected on shared drive,charlie,2026-03-12 11:30:00
+204,2026-03-13,DDoS,Medium,Closed,Temporary service latency from external traffic,frank,2026-03-13 12:15:00
+205,2026-03-14,Phishing,High,Open,Spoofed executive emails reported,alice,2026-03-14 09:55:00
+206,2026-03-15,Malware,Medium,Resolved,Malicious macro document quarantined,diana,2026-03-15 11:10:00
+207,2026-03-16,Phishing,High,Open,Credential harvesting campaign detected,emma,2026-03-16 09:50:00
+208,2026-03-17,Ransomware,Critical,Investigating,Ransomware attempt blocked from spreading,bob,2026-03-17 12:35:00
+209,2026-03-18,Phishing,High,Open,Mass phishing targeting HR inboxes,charlie,2026-03-18 10:10:00
+210,2026-03-19,DDoS,Medium,Closed,Short degradation due to network overload,frank,2026-03-19 13:25:00
+211,2026-03-20,Phishing,High,Open,Fake invoice emails reported,alice,2026-03-20 09:40:00
+212,2026-03-21,Malware,Medium,Resolved,Spyware detected and removed,diana,2026-03-21 11:30:00
+213,2026-03-22,Ransomware,Critical,Investigating,Suspicious encryption process flagged,emma,2026-03-22 12:50:00
+214,2026-03-23,Phishing,High,Open,Attackers impersonating IT support,bob,2026-03-23 10:05:00
+215,2026-03-24,DDoS,Medium,Closed,Mitigated sudden surge in external requests,charlie,2026-03-24 13:00:00
+216,2026-03-25,Phishing,High,Open,Malicious PDF attachments circulating,frank,2026-03-25 09:55:00
+217,2026-03-26,Malware,Medium,Resolved,Rootkit removed after scan,alice,2026-03-26 11:20:00
+218,2026-03-27,Phishing,Critical,Open,Targeted spear-phishing against finance team,diana,2026-03-27 10:00:00
+219,2026-03-28,Ransomware,High,Investigating,Encrypted files found on isolated endpoint,emma,2026-03-28 12:10:00
+220,2026-03-29,Phishing,High,Open,Multiple fake login prompts reported,bob,2026-03-29 09:45:00
+221,2026-03-30,DDoS,Medium,Closed,Short burst attack mitigated,charlie,2026-03-30 13:40:00
+222,2026-03-31,Phishing,High,Open,Employees received suspicious password reset emails,frank,2026-03-31 09:50:00
+223,2026-04-01,Malware,Medium,Resolved,Trojan downloader removed,alice,2026-04-01 11:35:00
+224,2026-04-02,Phishing,Critical,Open,CEO impersonation attack attempt,diana,2026-04-02 10:20:00
+225,2026-04-03,Ransomware,Critical,Investigating,Unauthorized encryption activity detected,emma,2026-04-03 12:25:00
+226,2026-04-04,Phishing,High,Open,Fake system update emails reported,bob,2026-04-04 09:55:00
+227,2026-04-05,DDoS,Medium,Closed,Minor outage due to traffic flooding,charlie,2026-04-05 13:10:00
+228,2026-04-06,Phishing,High,Open,Employees targeted with fraudulent benefits emails,frank,2026-04-06 10:05:00
+229,2026-04-07,Malware,Medium,Resolved,Malicious browser extension removed,alice,2026-04-07 11:25:00
+230,2026-04-08,Phishing,High,Open,Access credential phishing attempts,diana,2026-04-08 09:50:00
+231,2026-04-09,Ransomware,Critical,Investigating,Behavior resembling ransomware detected,emma,2026-04-09 12:00:00
+232,2026-04-10,Phishing,High,Open,Company-wide phishing emails circulating,bob,2026-04-10 10:10:00
+233,2026-04-11,DDoS,Medium,Closed,Increased traffic caused temporary slowdown,charlie,2026-04-11 13:55:00
+234,2026-04-12,Phishing,High,Open,Suspicious verification links detected,frank,2026-04-12 09:45:00
+235,2026-04-13,Malware,Medium,Resolved,Keylogger quarantined after scan,alice,2026-04-13 11:40:00
+236,2026-04-14,Phishing,Critical,Open,Finance department targeted by fake payment requests,diana,2026-04-14 10:30:00
+237,2026-04-15,Ransomware,High,Investigating,Encrypted temp files discovered,emma,2026-04-15 12:05:00
+238,2026-04-16,Phishing,High,Open,Identity impersonation emails detected,bob,2026-04-16 09:55:00
+239,2026-04-17,DDoS,Medium,Closed,API slowdown mitigated,charlie,2026-04-17 13:20:00
+240,2026-04-18,Phishing,High,Open,Fake mailbox quota warnings reported,frank,2026-04-18 09:50:00
+241,2026-04-19,Malware,Medium,Resolved,Macro-based malware removed,alice,2026-04-19 11:00:00
+242,2026-04-20,Phishing,High,Open,Multiple suspicious sender domains detected,diana,2026-04-20 10:10:00
+243,2026-04-21,Ransomware,Critical,Investigating,Attempted encryption blocked in real-time,emma,2026-04-21 12:40:00
+244,2026-04-22,Phishing,High,Open,Emails containing malicious OneDrive links,bob,2026-04-22 09:55:00
+245,2026-04-23,DDoS,Medium,Closed,Short service interruption due to overload,charlie,2026-04-23 13:35:00
+246,2026-04-24,Phishing,High,Open,Fake HR policy update emails detected,frank,2026-04-24 10:00:00
+247,2026-04-25,Malware,Medium,Resolved,Backdoor program removed from device,alice,2026-04-25 11:45:00
+248,2026-04-26,Phishing,High,Open,Users tricked by fraudulent security alerts,diana,2026-04-26 09:50:00
+249,2026-04-27,Ransomware,Critical,Investigating,Multiple endpoints showing suspicious encryption attempts,emma,2026-04-27 12:55:00
+250,2026-04-28,Phishing,High,Open,Phishing emails impersonating IT support,bob,2026-04-28 10:05:00
+251,2026-04-29,DDoS,Medium,Closed,Increased traffic congestion cleared,charlie,2026-04-29 13:00:00
+252,2026-04-30,Phishing,High,Open,Employees targeted with fake document approvals,frank,2026-04-30 10:20:00
+253,2026-05-01,Malware,Medium,Resolved,Trojan program removed during audit,alice,2026-05-01 11:10:00
+254,2026-05-02,Phishing,High,Open,Suspicious Dropbox links reported,diana,2026-05-02 09:55:00
+255,2026-05-03,Ransomware,Critical,Investigating,Ransomware-like behavior observed on internal node,emma,2026-05-03 12:30:00
+256,2026-05-04,Phishing,High,Open,Multiple malicious attachments detected,bob,2026-05-04 10:15:00
+257,2026-05-05,DDoS,Medium,Closed,Short downtime due to attack charlie,2026-05-05 13:45:00
+258,2026-05-06,Phishing,High,Open,Credential theft attempts via fake login alerts,frank,2026-05-06 09:40:00
+259,2026-05-07,Malware,Medium,Resolved,Infected email client extension removed,alice,2026-05-07 11:35:00
+260,2026-05-08,Phishing,High,Open,Fake payment confirmation emails detected,diana,2026-05-08 10:10:00
+261,2026-05-09,Ransomware,Critical,Investigating,Attempted encryption blocked on network share,emma,2026-05-09 12:05:00
+262,2026-05-10,Phishing,High,Open,Emails impersonating payroll department,bob,2026-05-10 09:55:00
+263,2026-05-11,DDoS,Medium,Closed,Traffic surge mitigated,charlie,2026-05-11 13:00:00
+264,2026-05-12,Phishing,High,Open,Fake service renewal notices reported,frank,2026-05-12 10:25:00
+265,2026-05-13,Malware,Medium,Resolved,Rogue script detected and deleted,alice,2026-05-13 11:50:00
+266,2026-05-14,Phishing,High,Open,Phishing attempts via compromised vendor email,diana,2026-05-14 10:00:00
+267,2026-05-15,Ransomware,Critical,Investigating,Suspicious file encryption activity detected,emma,2026-05-15 12:10:00
+268,2026-05-16,Phishing,High,Open,Fake password reset prompts,bob,2026-05-16 09:45:00
+269,2026-05-17,DDoS,Medium,Closed,System slowdown due to traffic storm,charlie,2026-05-17 13:20:00
+270,2026-05-18,Phishing,High,Open,Spam emails containing malicious macros,frank,2026-05-18 10:15:00
+271,2026-05-19,Malware,Medium,Resolved,Downloader malware removed from laptop,alice,2026-05-19 11:05:00
+272,2026-05-20,Phishing,High,Open,Multiple employees received scam notifications,diana,2026-05-20 09:55:00
+273,2026-05-21,Ransomware,Critical,Investigating,Encrypted temporary files discovered,emma,2026-05-21 12:00:00
+274,2026-05-22,Phishing,High,Open,Emails pretending to be internal announcements,bob,2026-05-22 10:20:00
+275,2026-05-23,DDoS,Medium,Closed,Service degradation mitigated,charlie,2026-05-23 13:15:00
+276,2026-05-24,Phishing,High,Open,Impersonation of vendors through fake invoices,frank,2026-05-24 09:50:00
+277,2026-05-25,Malware,Medium,Resolved,Adware infection removed,alice,2026-05-25 11:30:00
+278,2026-05-26,Phishing,High,Open,Fake collaboration platform invites,diana,2026-05-26 10:05:00
+279,2026-05-27,Ransomware,Critical,Investigating,Ransomware blocked at early stage,emma,2026-05-27 12:25:00
+280,2026-05-28,Phishing,High,Open,Mass phishing attack detected targeting managers,bob,2026-05-28 10:00:00
+281,2026-05-29,DDoS,Medium,Closed,Short connection interruptions resolved,charlie,2026-05-29 13:30:00
+282,2026-05-30,Phishing,High,Open,Multiple email spoofing attempts,frank,2026-05-30 09:55:00
+283,2026-05-31,Malware,Medium,Resolved,USB-based malware quarantined,alice,2026-05-31 11:45:00
+284,2026-06-01,Phishing,High,Open,Attackers using fake MFA prompts,diana,2026-06-01 10:10:00
+285,2026-06-02,Ransomware,Critical,Investigating,Persistent encryption attempts observed on device,emma,2026-06-02 12:40:00
+286,2026-06-03,Phishing,High,Open,Malicious sign-in alerts reported,bob,2026-06-03 09:50:00
+287,2026-06-04,DDoS,Medium,Closed,Traffic imbalance handled,charlie,2026-06-04 13:00:00
+288,2026-06-05,Phishing,High,Open,Emails containing malicious QR codes,frank,2026-06-05 10:15:00
+289,2026-06-06,Malware,Medium,Resolved,Remote access trojan removed,alice,2026-06-06 11:10:00
+290,2026-06-07,Phishing,High,Open,Rise in fraudulent login attempts,diana,2026-06-07 09:55:00
+291,2026-06-08,Ransomware,Critical,Investigating,Encryption behavior detected in logs,emma,2026-06-08 12:35:00
+292,2026-06-09,Phishing,High,Open,Attackers attempting MFA bypass,bob,2026-06-09 10:10:00
+293,2026-06-10,DDoS,Medium,Closed,Network saturation detected and mitigated,charlie,2026-06-10 13:20:00
+294,2026-06-11,Phishing,High,Open,Fake conference invitation emails,frank,2026-06-11 10:05:00
+295,2026-06-12,Malware,Medium,Resolved,Infected spreadsheet cleaned,alice,2026-06-12 11:30:00
+296,2026-06-13,Phishing,High,Open,Employees reported suspicious wire transfer requests,diana,2026-06-13 09:50:00
+297,2026-06-14,Ransomware,Critical,Investigating,Attempted spread detected in network,emma,2026-06-14 12:15:00
+298,2026-06-15,Phishing,High,Open,Malicious links sent from compromised vendor account,bob,2026-06-15 10:20:00
+299,2026-06-16,DDoS,Medium,Closed,Load balancer mitigated traffic overload,charlie,2026-06-16 13:40:00
+300,2026-06-17,Phishing,High,Open,Phishing attack using fake authentication alerts,frank,2026-06-17 09:55:00
+301,2026-03-24,Phishing,High,Open,Phishing emails with malicious URLs detected,emma,2026-03-24 10:10:00
+302,2026-03-25,Malware,Medium,Resolved,Malware detected and removed from laptop,bob,2026-03-25 11:20:00
+303,2026-03-26,Ransomware,Critical,Investigating,Ransomware behavior detected in logs,charlie,2026-03-26 12:40:00
+304,2026-03-27,DDoS,Medium,Closed,API outage mitigated successfully,frank,2026-03-27 13:15:00
+305,2026-03-28,Phishing,High,Open,Fake payroll update emails circulating,alice,2026-03-28 09:55:00
+306,2026-03-29,Phishing,High,Open,Credential harvesting emails detected,diana,2026-03-29 10:20:00
+307,2026-03-30,Malware,Medium,Resolved,Adware removed from workstation,emma,2026-03-30 11:15:00
+308,2026-03-31,Ransomware,Critical,Investigating,Ransomware blocked by endpoint security,bob,2026-03-31 12:55:00
+309,2026-04-01,Phishing,Critical,Open,Spear-phishing targeting executives,charlie,2026-04-01 09:45:00
+310,2026-04-02,DDoS,Medium,Closed,Traffic overload mitigated,frank,2026-04-02 13:05:00
+311,2026-04-03,Phishing,High,Open,Employees reporting suspicious emails,alice,2026-04-03 10:00:00
+312,2026-04-04,Phishing,High,Open,High-volume email phishing detected,diana,2026-04-04 10:25:00
+313,2026-04-05,Malware,Medium,Resolved,Trojan successfully removed,emma,2026-04-05 11:35:00
+314,2026-04-06,Ransomware,Critical,Investigating,Encrypted file attempts detected,bob,2026-04-06 12:10:00
+315,2026-04-07,Phishing,High,Open,Phishing emails impersonating HR,charlie,2026-04-07 09:55:00
+316,2026-04-08,DDoS,Medium,Closed,Website load spike mitigated,frank,2026-04-08 13:30:00
+317,2026-04-09,Phishing,Critical,Open,Executive-targeted phishing attack reported,alice,2026-04-09 09:40:00
+318,2026-04-10,Malware,Medium,Resolved,Malware blocked by antivirus,diana,2026-04-10 11:20:00
+319,2026-04-11,Ransomware,Critical,Investigating,Ransomware detected on finance machine,emma,2026-04-11 12:05:00
+320,2026-04-12,Phishing,High,Open,Multiple phishing attempts blocked,bob,2026-04-12 10:10:00
+321,2026-04-13,Phishing,High,Open,Fake login portal reported,charlie,2026-04-13 09:50:00
+322,2026-04-14,DDoS,Medium,Closed,Botnet traffic mitigated,frank,2026-04-14 13:45:00
+323,2026-04-15,Phishing,High,Open,Phishing emails reported in sales team,alice,2026-04-15 09:55:00
+324,2026-04-16,Malware,Medium,Resolved,Spyware removed from employee laptop,diana,2026-04-16 11:30:00
+325,2026-04-17,Ransomware,Critical,Investigating,Suspicious encryption process stopped,emma,2026-04-17 12:00:00
+326,2026-04-18,Phishing,High,Open,Spear-phishing campaign targeting finance,bob,2026-04-18 10:05:00
+327,2026-04-19,Phishing,High,Open,Credential harvesting attack detected,charlie,2026-04-19 09:45:00
+328,2026-04-20,DDoS,Medium,Closed,Temporary outage resolved,frank,2026-04-20 13:25:00
+329,2026-04-21,Phishing,Critical,Open,Targeted phishing in HR department,alice,2026-04-21 09:35:00
+330,2026-04-22,Malware,Medium,Resolved,Trojan blocked by firewall,diana,2026-04-22 11:10:00
+331,2026-04-23,Ransomware,Critical,Investigating,Finance workstation showing signs of compromise,emma,2026-04-23 12:45:00
+332,2026-04-24,Phishing,High,Open,Employees reporting spoofed emails,bob,2026-04-24 10:00:00
+333,2026-04-25,Phishing,High,Open,Phishing attachments detected,charlie,2026-04-25 09:55:00
+334,2026-04-26,DDoS,Medium,Closed,API traffic spike mitigated,frank,2026-04-26 13:20:00
+335,2026-04-27,Phishing,High,Open,Phishing emails with fake invoices,alice,2026-04-27 09:40:00
+336,2026-04-28,Malware,Medium,Resolved,Adware successfully removed,diana,2026-04-28 11:05:00
+337,2026-04-29,Ransomware,Critical,Investigating,Unauthorized encryption attempt detected,emma,2026-04-29 12:30:00
+338,2026-04-30,Phishing,High,Open,Multiple phishing campaigns active,bob,2026-04-30 10:15:00
+339,2026-05-01,Phishing,High,Open,CEO impersonation phishing detected,charlie,2026-05-01 09:55:00
+340,2026-05-02,DDoS,Medium,Closed,Website latency due to traffic storm,frank,2026-05-02 13:40:00
+341,2026-05-03,Phishing,Critical,Open,Spear-phishing targeting senior staff,alice,2026-05-03 09:50:00
+342,2026-05-04,Malware,Medium,Resolved,Keylogger removed from device,diana,2026-05-04 11:25:00
+343,2026-05-05,Ransomware,Critical,Investigating,Encrypted files found on server,emma,2026-05-05 12:55:00
+344,2026-05-06,Phishing,High,Open,Reports of phishing links,bob,2026-05-06 10:05:00
+345,2026-05-07,Phishing,High,Open,Teams-based phishing attempts detected,charlie,2026-05-07 09:45:00
+346,2026-05-08,DDoS,Medium,Closed,API slowdown due to attack,frank,2026-05-08 13:10:00
+347,2026-05-09,Phishing,High,Open,Large-scale phishing wave detected,alice,2026-05-09 09:55:00
+348,2026-05-10,Malware,Medium,Resolved,Malicious script removed from PC,diana,2026-05-10 11:15:00
+349,2026-05-11,Ransomware,Critical,Investigating,Ransomware signatures detected,emma,2026-05-11 12:20:00
+350,2026-05-12,Phishing,Critical,Open,High-level spear-phishing attack reported,bob,2026-05-12 09:50:00
+351,2026-05-13,Phishing,High,Open,Fake login URLs reported,charlie,2026-05-13 10:15:00
+352,2026-05-14,DDoS,Medium,Closed,Traffic spike resolved,frank,2026-05-14 13:00:00
+353,2026-05-15,Phishing,High,Open,Phishing targeting IT department,alice,2026-05-15 09:45:00
+354,2026-05-16,Malware,Medium,Resolved,Adware uninstalled successfully,diana,2026-05-16 11:10:00
+355,2026-05-17,Ransomware,Critical,Investigating,Attempted encryption blocked,emma,2026-05-17 12:30:00
+356,2026-05-18,Phishing,High,Open,Multiple suspicious emails reported,bob,2026-05-18 10:00:00
+357,2026-05-19,Phishing,High,Open,Phishing emails with malicious PDFs,charlie,2026-05-19 09:55:00
+358,2026-05-20,DDoS,Medium,Closed,Service slowdown resolved,frank,2026-05-20 13:30:00
+359,2026-05-21,Phishing,High,Open,Employees reporting fake system alerts,alice,2026-05-21 09:35:00
+360,2026-05-22,Malware,Medium,Resolved,Trojan detected and removed,diana,2026-05-22 11:00:00
+361,2026-05-23,Ransomware,Critical,Investigating,Detected ransomware behavior on server,emma,2026-05-23 12:40:00
+362,2026-05-24,Phishing,Critical,Open,Executive accounts targeted,bob,2026-05-24 09:45:00
+363,2026-05-25,Phishing,High,Open,Credential harvesting attempt,charlie,2026-05-25 10:10:00
+364,2026-05-26,DDoS,Medium,Closed,Short outage resolved,frank,2026-05-26 13:25:00
+365,2026-05-27,Phishing,High,Open,High-volume phishing detected,alice,2026-05-27 09:55:00
+366,2026-05-28,Malware,Medium,Resolved,Spyware successfully removed,diana,2026-05-28 11:20:00
+367,2026-05-29,Ransomware,Critical,Investigating,New ransomware variant detected,emma,2026-05-29 12:55:00
+368,2026-05-30,Phishing,High,Open,Fake executive emails reported,bob,2026-05-30 10:05:00
+369,2026-05-31,Phishing,High,Open,Password reset phishing detected,charlie,2026-05-31 09:50:00
+370,2026-06-01,DDoS,Medium,Closed,Attack traffic filtered,frank,2026-06-01 13:10:00
+371,2026-06-02,Phishing,High,Open,Malicious attachments reported,alice,2026-06-02 09:45:00
+372,2026-06-03,Malware,Medium,Resolved,Malware removed from workstation,diana,2026-06-03 11:05:00
+373,2026-06-04,Ransomware,Critical,Investigating,Unauthorized encryption found,emma,2026-06-04 12:15:00
+374,2026-06-05,Phishing,High,Open,Suspicious HR-related emails,bob,2026-06-05 10:00:00
+375,2026-06-06,Phishing,High,Open,Impersonation emails detected,charlie,2026-06-06 09:55:00
+376,2026-06-07,DDoS,Medium,Closed,Public API slowdown resolved,frank,2026-06-07 13:20:00
+377,2026-06-08,Phishing,Critical,Open,Senior leadership targeted again,alice,2026-06-08 09:50:00
+378,2026-06-09,Malware,Medium,Resolved,Keylogger removed from employee system,diana,2026-06-09 11:15:00
+379,2026-06-10,Ransomware,Critical,Investigating,Ransomware attack prevented,emma,2026-06-10 12:20:00
+380,2026-06-11,Phishing,High,Open,Large wave of phishing emails,bob,2026-06-11 10:10:00
+381,2026-06-12,Phishing,High,Open,Spoofed login pages detected,charlie,2026-06-12 09:45:00
+382,2026-06-13,DDoS,Medium,Closed,Traffic spike managed,frank,2026-06-13 13:30:00
+383,2026-06-14,Phishing,High,Open,Employees targeted with fake invoices,alice,2026-06-14 09:55:00
+384,2026-06-15,Malware,Medium,Resolved,Trojan quarantine successful,diana,2026-06-15 11:25:00
+385,2026-06-16,Ransomware,Critical,Investigating,Encrypted documents discovered,emma,2026-06-16 12:40:00
+386,2026-06-17,Phishing,High,Open,Multiple suspicious links circulated,bob,2026-06-17 10:10:00
+387,2026-06-18,Phishing,High,Open,HR impersonation attack,charlie,2026-06-18 09:50:00
+388,2026-06-19,DDoS,Medium,Closed,Minor outage addressed,frank,2026-06-19 13:15:00
+389,2026-06-20,Phishing,High,Open,Phishing targeting payroll team,alice,2026-06-20 09:35:00
+390,2026-06-21,Malware,Medium,Resolved,Spyware removed,diana,2026-06-21 11:10:00
+391,2026-06-22,Ransomware,Critical,Investigating,Detected abnormal encryption patterns,emma,2026-06-22 12:55:00
+392,2026-06-23,Phishing,Critical,Open,Targeted spear-phishing in HR,bob,2026-06-23 09:45:00
+393,2026-06-24,Phishing,High,Open,Unauthorized login attempt reports,charlie,2026-06-24 10:20:00
+394,2026-06-25,DDoS,Medium,Closed,API attack mitigated,frank,2026-06-25 13:00:00
+395,2026-06-26,Phishing,High,Open,Multiple employees reported phishing,alice,2026-06-26 09:40:00
+396,2026-06-27,Malware,Medium,Resolved,Malware cleaned from device,diana,2026-06-27 11:30:00
+397,2026-06-28,Ransomware,Critical,Investigating,Attempted encryption blocked,emma,2026-06-28 12:10:00
+398,2026-06-29,Phishing,High,Open,Credential phishing links circulated,bob,2026-06-29 09:55:00
+399,2026-06-30,Phishing,High,Open,Organization-wide phishing attack,charlie,2026-06-30 10:00:00
+400,2026-07-01,DDoS,Medium,Closed,Botnet traffic mitigated,frank,2026-07-01 13:20:00

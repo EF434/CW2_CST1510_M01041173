@@ -9,7 +9,6 @@ Includes:
 """
 
 # Import required modules
-import plotly.express as px
 import pandas as pd
 import sqlite3
 
@@ -198,4 +197,42 @@ def unresolved_incidents_by_type(conn):
     """
     df = pd.read_sql_query(query, conn)
     return df
+
+# Find monthly trend for a specific threat type
+def get_threat_spike(conn, incident_type="Phishing"):
+    """
+    Find monthly spikes for a threat type
+    """
+    query = """
+    SELECT strftime('%Y-%m', date) AS month, COUNT(*) AS count
+    FROM cyber_incidents
+    WHERE incident_type = ?
+    GROUP BY month
+    ORDER BY month
+    """
+    
+    df = pd.read_sql_query(query, conn, params=(incident_type,))
+    
+    # Simple spike detection: count > 10
+    df['spike'] = df['count'] > 10
+    
+    return df
+
+def get_resolution_bottleneck(conn):
+    """
+    Find which incident type has most unresolved cases or longest open duration.
+    """
+    df = get_all_incidents(conn)
+
+    # Convert date
+    df['date'] = pd.to_datetime(df['date'])
+
+    # Calculate 'age' for unresolved incidents
+    df['open_days'] = (pd.Timestamp.now() - df['date']).dt.days
+    unresolved = df[df['status'].isin(['Open', 'Investigating'])]
+
+    # Average unresolved days per incident type
+    result = unresolved.groupby('incident_type', as_index=False)['open_days'].mean()
+    result = result.sort_values('open_days', ascending=False)
+    return result
 

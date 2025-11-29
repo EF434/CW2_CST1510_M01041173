@@ -11,6 +11,9 @@ __pycache_/
 .env
 .env.local
 
+# Streamlit secrets 
+.streamlit/secrets.toml
+
 # IDE settings
 .vscode/ 
 .idea/
@@ -18,3 +21,5 @@ __pycache_/
 # OS files
 .DS_Store
 Thumbs.db
+
+.history/

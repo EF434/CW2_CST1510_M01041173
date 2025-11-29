@@ -123,6 +123,16 @@ def delete_ticket(conn, ticket_id):
         print(f"❌ Error deleting ticket '{ticket_id}': {e}")
         return 0
 
+def get_ticket_trend(conn):
+    """
+    Return daily count of tickets created (for line chart visualization)
+    """
+    df = get_all_tickets(conn)
+    df['created_date'] = pd.to_datetime(df['created_date'], errors='coerce')
+    trend_df = df.groupby(df['created_date'].dt.date).size().reset_index(name='Tickets Created')
+    return trend_df
+
+
 def get_unresolved_tickets(conn):
     """
     Retrieve tickets with no resolved date.

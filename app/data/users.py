@@ -4,7 +4,6 @@ users.py - Provide helper functions for managing user in daabase
  - Function to add user to the database
 
 """
-from app.data.db import connect_database
 
 # Get user's data based on username
 def get_user_by_username(conn, username):

@@ -12,9 +12,20 @@ from authentication import (
 )
 
 # ---------- Streamlit Page Config ----------
-st.set_page_config(page_title="Wave", layout="wide", page_icon="logo.png")
+st.set_page_config(page_title="Wave - Homepage", layout="wide", page_icon="logo.png")
 st.image("banner.png", caption = "banner image", use_column_width=True)
-st.title("🔐 Welcome to Wave")
+
+
+st.markdown(
+    """
+    <h1 style='display:flex; align-items:center; gap:10px;'>
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" width="35"/>
+         Welcome to Wave
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
+
 st.caption("Register / Login")
 
 # ---------- Session state ----------
@@ -40,7 +51,7 @@ tab_login, tab_register = st.tabs(["Login", "Register"])
 with tab_login:
     st.subheader("Login")
 
-    login_username = st.text_input("Username", key="login_username")
+    login_username = st.text_input("Username", key="login_username") # add place holde here===
     login_password = st.text_input("Password", type="password", key="login_password")
 
     # ---- Login Button ----
@@ -80,13 +91,13 @@ with tab_register:
         st.subheader("Register")
         
         # Ask for username & password
-        new_username = st.text_input("Choose a username", key="register_username")
-        new_password = st.text_input("Choose a password", type="password", key="register_password")
+        new_username = st.text_input("Username", key="register_username")
+        new_password = st.text_input("Password", type="password", key="register_password")
         confirm_password = st.text_input("Confirm password", type="password", key="register_confirm")
 
         # Role selection
         role_options = ["user", "admin", "analyst"]
-        selected_role = st.selectbox("Select your role", role_options, index=0)
+        selected_role = st.selectbox("Select your role", role_options)
 
         if st.button("Create account"):
             valid_user, msg_user = validate_username(new_username)
@@ -107,8 +118,8 @@ with tab_register:
                     strength_ok, strength_msg = check_password_strength(new_password)
 
                     # Map strength to progress bar
-                    strength_map = {"Weak": 0.25, "Moderate": 0.66, "Strong": 1.0}
-                    st.progress(strength_map.get(strength_msg.split()[0], 0.25))
+                    strength_bar = {"Weak": 0.25, "Moderate": 0.66, "Strong": 1.0}
+                    st.progress(strength_bar.get(strength_msg.split()[0], 0.25))
                     st.info(strength_msg)
 
                     if not strength_ok:

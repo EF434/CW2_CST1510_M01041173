@@ -24,19 +24,20 @@ create_all_tables(conn)
 load_all_csv_data(conn, os.path.join(DATA_DIR, "cyber_incidents.csv"), "cyber_incidents")
 load_all_csv_data(conn, os.path.join(DATA_DIR, "it_tickets.csv"), "it_tickets")
 load_all_csv_data(conn, os.path.join(DATA_DIR, "datasets_metadata.csv"), "datasets_metadata")
-"""
+
 # ------------------- LOGIN CHECK -------------------
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
+# Guard login
 if not st.session_state.logged_in:
     st.error("You must be logged in.")
     if st.button("Go to Login"):
         st.switch_page("Home.py")
     st.stop()
-"""
+
 # ------------------- UI HEADER -------------------
-st.set_page_config(page_title="Dashboard", layout="wide", page_icon="logo.png")
+st.set_page_config(page_title="Wave - Dashboard", layout="wide", page_icon="logo.png")
 st.markdown(
     """<h1 style='text-align: center; color: #1f77b4; font-family: "Segoe UI", sans-serif;'>
     Multi-Domain Intelligence Platform
@@ -46,23 +47,24 @@ st.markdown(
 
 # ------------------- SIDEBAR -------------------
 domain = st.sidebar.selectbox("Select Domain", ["Cybersecurity", "IT Operations", "Data Science"])
-options = ["📄 View Records", "➕ Add New Record", "✏ Update / Delete", "📊 Charts / Insights"]
-actions = st.sidebar.multiselect("Select Actions", options, default=["📄 View Records"])
+options = st.sidebar.multiselect(
+    "Select Actions", ["📄 View Records", "➕ Add New Record", "✏ Update / Delete"], default="📄 View Records"
+    )
 
 # ------------------- ACTIONS -------------------
-table_map = {
+domain_options = {
     "Cybersecurity": "cyber_incidents",
     "IT Operations": "it_tickets",
     "Data Science": "datasets_metadata"
 }
 
-table_name = table_map[domain]
+table_name = domain_options[domain]
 
-if "📄 View Records" in actions:
+if "📄 View Records" in options:
     view_records(conn, table_name)
-if "➕ Add New Record" in actions:
+if "➕ Add New Record" in options:
     add_new_record(conn, table_name)
-if "✏ Update / Delete" in actions:
+if "✏ Update / Delete" in options:
     update_delete_record(conn, table_name)
     st.stop()
 

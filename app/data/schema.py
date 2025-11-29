@@ -205,6 +205,41 @@ def create_it_tickets_table(conn):
     except sqlite3.Error as e:
          print(f"❌ Error creating it_tickets table: {e}")
 
+
+def create_chat_history_table(conn):
+    """
+    Create the chat_history table.
+
+    Required columns:
+    - id: INTEGER PRIMARY KEY AUTOINCREMENT
+    - user_id: TEXT NOT NULL
+    - domain: TEXT NOT NULL
+    - role: TEXT NOT NULL (e.g., 'system', 'user', 'assistant')
+    - content: TEXT NOT NULL
+    - timestamp: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    """
+    # Get a cursor from the connection
+    cursor = conn.cursor()
+
+    # SQL statement to create 'chat_history' table
+    create_table_sql = """
+        CREATE TABLE IF NOT EXISTS chat_history (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            domain TEXT NOT NULL,
+            role TEXT NOT NULL,
+            content TEXT NOT NULL,
+            timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """
+    try:
+        with conn:
+            cursor.execute(create_table_sql)
+        print("✅ 'chat_history' table created successfully!")
+    except sqlite3.Error as e:
+        print(f"❌ Error creating chat_history table: {e}")
+
+
 # ------------------------------------
 # Function to create all tables 
 # ------------------------------------
@@ -221,5 +256,7 @@ def create_all_tables(conn):
     create_cyber_incidents_table(conn)
     create_datasets_metadata_table(conn)
     create_it_tickets_table(conn)
+    create_chat_history_table(conn)
+
 
 # --- End of schema.py ---

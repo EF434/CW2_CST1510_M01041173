@@ -3,6 +3,8 @@ import streamlit as st
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+#import Altair
 import pandas as pd
 import sys
 import os
@@ -47,44 +49,35 @@ create_all_tables(conn)
 
 # ------------------- VIEW RECORDS -------------------
 def view_records(conn, table_name):
-    st.markdown(
-            """
-            <style>
-            .table-header {
-                font-family: "Segoe UI", Roboto, sans-serif;
-                font-size: 28px;
-                font-weight: 700;
-                letter-spacing: 0.6px;
-                color: #0b3d91;
-                margin: 0;
-                padding-bottom: 6px;
-                display: inline-block;
-                border-bottom: 4px solid #ff4b4b;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+        st.markdown(
+"""    
+        <style>
+        .table-header {font: bold 28px "Segoe UI", Roboto, sans-serif; color:#0b3d91; border-bottom:3px solid #ff4b4b; margin-bottom:10px;}
+        table {border-collapse:collapse; width:100%;}
+        th {background:#0b3d91; color:#fff; padding:8px; text-align:left;}
+        td {padding:6px; border-bottom:1px solid #ddd;}
+        tr:hover {background:#f1f1f1;}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+# work on the html
+        if table_name == "cyber_incidents":
+            df = get_all_incidents(conn)
+            st.markdown('<div class="table-header">🔒 Cyber Incidents</div>', unsafe_allow_html=True)
 
-# ------------------- VIEW RECORDS -------------------
-def view_records(conn, table_name):
-    if table_name == "cyber_incidents":
-        df = get_all_incidents(conn)
+        elif table_name == "it_tickets":
+            df = get_all_tickets(conn)
+            st.markdown('<div class="table-header">💻 IT Tickets</div>', unsafe_allow_html=True)
 
-        st.markdown('<div class="cyber-sub">🔒 Cyber Incidents</div>', unsafe_allow_html=True)
+        elif table_name == "datasets_metadata":
+            df = get_all_datasets(conn)
+            st.markdown('<div class="table-header">📊 Data Science Datasets</div>', unsafe_allow_html=True)
 
-    elif table_name == "it_tickets":
-        df = get_all_tickets(conn)
-        st.markdown('<div class="table-header">💻 IT Tickets</div>', unsafe_allow_html=True)
-
-    elif table_name == "datasets_metadata":
-        df = get_all_datasets(conn)
-        st.markdown('<div class="table-header">📊 Data Science Datasets</div>', unsafe_allow_html=True)
-
-    else:
-        st.error("Unknown table")
-        return
-    st.dataframe(df, use_container_width=True)
+        else:
+            st.error("Unknown table")
+            return
+        st.dataframe(df, use_container_width=True)
 
 
 
@@ -92,7 +85,7 @@ def view_records(conn, table_name):
 def add_new_record(conn, table_name):
     if table_name == "cyber_incidents":
         st.subheader("Add New Cybersecurity Incident")
-        with st.form("add_incident"):
+        with st.form("new_incident"):
             date = st.date_input("Date")
             incident_type = st.selectbox("Incident Type", ["Phishing", "Malware", "DDoS", "Ransomware"])
             severity = st.selectbox("Severity", ["Low", "Medium", "High", "Critical"])
