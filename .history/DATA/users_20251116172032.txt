@@ -1,7 +1,0 @@
-Alice,$2b$12$Z7T5Z0s3QqsJHMQ5S4r.Jee7IXAbLRf5E2hyE4PJ/WbOyTef02.Ue,admin
-Brian,$2b$12$Om8yfQfybn/3SfTteyCkCuwUj1873allJwTG3KiNo0ZWAuSJktBOe,analyst
-Emma,$2b$12$wN/dmSqsXURWzHpv97XJqOxtKERoD/8e4cUaSe1LYDDNoothi0/Am,user
-Albert,$2b$12$d6zJ5lRzmIB9yccR..5QY.Rg54PLr07zallsoW.zAKswEdIRwKpgK,user
-Peter,$2b$12$tvq.YTL18MT2oscMF9Gm/./bTkd.XZDvNxTCKSMY6rO5kRJvyPMC6,admin
-Nathan,$2b$12$0PiCCahaIegGN9QOYkMZkOWvTGR/BrP3tuLBybvquU4fBo0qJJUim,analyst
-Micheal,$2b$12$C24L4dxtAQJ1NQOyO16eMOQfhZvqEsJZZplV1Aim6/Vzj8eyoOaCa,admin
